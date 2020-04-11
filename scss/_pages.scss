@@ -1,17 +1,66 @@
 //code only for one page
-.containerGrid{
-    &__menu{
-        &--note{
+@import "_utils.scss";
 
+#main_wrapper {
+
+& main{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        width:100%;
+        height:map-get($heights,main);
+        .containerGrid{
+            display:grid;
+            grid-template-columns: 300px 300px;
+            grid-template-rows: 400px 400px;
+            grid-gap:30px;
+            &__menu{
+                display:flex;
+                border: 1px solid black;
+                position: relative;
+                & a{
+                    position: absolute;
+                    width:100%;
+                    height:100%;
+                    top:0;
+                    left:0;
+                    text-decoration: none;
+                    z-index:10;
+                }
+                &--note{
+                    background-color: map-get($menu-bg-colors,menu1);  
+                }
+                &--chic{
+                    background-color: map-get($menu-bg-colors,menu2);
+                }
+                &--delice{
+                    background-color: map-get($menu-bg-colors,menu3);
+                }
+                &--palette{
+                    background-color: map-get($menu-bg-colors,menu4);
+                }
+            }
         }
-        &--chic{
+    }
 
-        }
-        &--delice{
-
-        }
-        &--palette{
-
+    .containerNext{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:100%;
+        height:12%;
+        margin-bottom:map-get($heights,footer);
+        .prochainement{
+            text-align: center;
+            width:15%;
+            background-color: map-get($extremity-colors,prochainement);
         }
     }
 }
+
+
+
+
+
+
+

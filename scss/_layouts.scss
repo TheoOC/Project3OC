@@ -1,14 +1,43 @@
 //Block Elements Modifiers that we can reuse
 
-header{
-}
-footer{
-    & .ml{
-    
-    }
-    & .contact{
-    
-    }
-}
 
+#main_wrapper , .menus_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    
+    & header{
+        background-color: map-get($extremity-colors,header);
+        display:flex;
+        height:map-get($heights,header);
+        width:100%;
+        & img{
+            height:50px;
+            margin:auto;
+        }
+        & a{
+            margin:auto;
+        }
+    }
 
+    & footer{
+        background-color: map-get($extremity-colors,footer);
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height:map-get($heights,header)px;
+        width:100%;
+        position:fixed;
+        bottom:0;
+        left:0;
+
+            & .ml{
+            color:#FDCB46;
+            }
+            & .contact{
+            color:#FDCB46;
+            }
+        }
+}
