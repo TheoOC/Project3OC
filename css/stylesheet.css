@@ -116,7 +116,10 @@ html, body {
     #main_wrapper main .containerGrid__menu {
       display: flex;
       border: 1px solid black;
-      position: relative; }
+      position: relative;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
       #main_wrapper main .containerGrid__menu a {
         position: absolute;
         width: 100%;
@@ -130,6 +133,9 @@ html, body {
         width: 300px;
         height: 400px;
         margin: 30px; }
+        #main_wrapper main .containerGrid__menu--note img {
+          width: 45px;
+          height: 45px; }
       #main_wrapper main .containerGrid__menu--chic {
         background-color: #FFF5FE;
         width: 300px;
