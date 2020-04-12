@@ -10,10 +10,11 @@
         width:100%;
         height:map-get($heights,main);
         .containerGrid{
-            display:grid;
-            grid-template-columns: 300px 300px;
-            grid-template-rows: 400px 400px;
-            grid-gap:30px;
+            max-width:#{$menuSelectWidth * 3};
+            justify-content: center;
+            align-items: center;
+            display:flex;
+            flex-wrap:wrap;
             &__menu{
                 display:flex;
                 border: 1px solid black;
@@ -29,15 +30,19 @@
                 }
                 &--note{
                     background-color: map-get($menu-bg-colors,menu1);  
+                    @include menuBlock;
                 }
                 &--chic{
                     background-color: map-get($menu-bg-colors,menu2);
+                    @include menuBlock;
                 }
                 &--delice{
                     background-color: map-get($menu-bg-colors,menu3);
+                    @include menuBlock;
                 }
                 &--palette{
                     background-color: map-get($menu-bg-colors,menu4);
+                    @include menuBlock;
                 }
             }
         }
@@ -48,11 +53,11 @@
         justify-content: center;
         align-items: center;
         width:100%;
-        height:12%;
+        min-height:15%;
         margin-bottom:map-get($heights,footer);
         .prochainement{
             text-align: center;
-            width:15%;
+            width:250px;
             background-color: map-get($extremity-colors,prochainement);
         }
     }
@@ -62,5 +67,22 @@
 
 
 
+.menus_wrapper{
 
+    & main{
+        & .containerMenu{
+            &__menu1{
 
+            }
+            &__menu2{
+                
+            }
+            &__menu3{
+                
+            }
+            &__menu4{
+                
+            }
+        }
+    }
+}

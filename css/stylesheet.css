@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  margin: auto; }
   #main_wrapper header, .menus_wrapper header {
     background-color: #579C87;
     display: flex;
@@ -17,17 +18,88 @@
     background-color: #579C87;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     height: 100px px;
     width: 100%;
     position: fixed;
     bottom: 0;
-    left: 0; }
+    left: 0;
+    width: 100%; }
     #main_wrapper footer .ml, .menus_wrapper footer .ml {
       color: #FDCB46; }
     #main_wrapper footer .contact, .menus_wrapper footer .contact {
       color: #FDCB46; }
+
+.menus_wrapper .menuTitle {
+  margin: auto; }
+  .menus_wrapper .menuTitle h1 {
+    margin: 50px 0 20px 0; }
+
+.menus_wrapper main {
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+  .menus_wrapper main .containerMenu {
+    max-width: 520px;
+    min-height: 970px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 65px 0 65px;
+    min-width: 520px;
+    min-height: 970px;
+    background-color: #FCDFDB;
+    margin-bottom: 75px; }
+    .menus_wrapper main .containerMenu > img {
+      width: 60px;
+      height: 60px;
+      margin: 0; }
+    .menus_wrapper main .containerMenu > h2 {
+      margin: 10px 0 10px 0; }
+    .menus_wrapper main .containerMenu article {
+      width: 100%; }
+      .menus_wrapper main .containerMenu article .articleTitle {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center; }
+      .menus_wrapper main .containerMenu article img {
+        display: inline-block;
+        width: 160px;
+        height: 12px; }
+      .menus_wrapper main .containerMenu article h3 {
+        display: inline-block; }
+      .menus_wrapper main .containerMenu article ul {
+        padding: 0;
+        margin: 0; }
+        .menus_wrapper main .containerMenu article ul li {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center; }
+
+.menus_wrapper .ending {
+  width: 100%;
+  margin: 40px 0 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  .menus_wrapper .ending img {
+    width: 38px;
+    height: 38px;
+    margin-right: 5px; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
 
 #main_wrapper main {
   display: flex;
@@ -36,10 +108,11 @@
   width: 100%;
   height: 1000px; }
   #main_wrapper main .containerGrid {
-    display: grid;
-    grid-template-columns: 300px 300px;
-    grid-template-rows: 400px 400px;
-    grid-gap: 30px; }
+    max-width: 900px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap; }
     #main_wrapper main .containerGrid__menu {
       display: flex;
       border: 1px solid black;
@@ -53,22 +126,34 @@
         text-decoration: none;
         z-index: 10; }
       #main_wrapper main .containerGrid__menu--note {
-        background-color: #FCDFDB; }
+        background-color: #FCDFDB;
+        width: 300px;
+        height: 400px;
+        margin: 30px; }
       #main_wrapper main .containerGrid__menu--chic {
-        background-color: #FFF5FE; }
+        background-color: #FFF5FE;
+        width: 300px;
+        height: 400px;
+        margin: 30px; }
       #main_wrapper main .containerGrid__menu--delice {
-        background-color: #F9F9F9; }
+        background-color: #F9F9F9;
+        width: 300px;
+        height: 400px;
+        margin: 30px; }
       #main_wrapper main .containerGrid__menu--palette {
-        background-color: #FDFFFD; }
+        background-color: #FDFFFD;
+        width: 300px;
+        height: 400px;
+        margin: 30px; }
 
 #main_wrapper .containerNext {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 12%;
+  min-height: 15%;
   margin-bottom: 75px; }
   #main_wrapper .containerNext .prochainement {
     text-align: center;
-    width: 15%;
+    width: 250px;
     background-color: #579C87; }

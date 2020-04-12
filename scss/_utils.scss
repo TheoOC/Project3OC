@@ -1,4 +1,12 @@
 //variables mixins %placeholders
+$menuSelectWidth:300px;
+$menuSelectHeight:400px;
+$menuSelectMargin:30px;
+
+$menuWidth:520px;
+$menuHeight:970px;
+$menuPadding:65px;
+
 $extremity-colors:(
     header:#579C87,
     prochainement:#579C87,
@@ -8,3 +16,24 @@ $extremity-colors:(
 $menu-bg-colors:(menu1:#FCDFDB,menu2:#FFF5FE,menu3:#F9F9F9,menu4:#FDFFFD);
 
 $heights:( header:100px,main:1000px,footer:75px);
+
+$breakpoints:(tablet:992px,mobile:768px);
+
+@mixin tabletOnly{
+@media screen and (max-width: map-get($breakpoints, tablet )){
+    @content;
+    }
+}
+
+@mixin mobileOnly{
+    @media screen and (max-width: map-get($breakpoints, mobile )){
+        @content;
+    }
+}
+
+
+@mixin menuBlock{
+width:$menuSelectWidth;
+height:$menuSelectHeight;
+margin:$menuSelectMargin;
+}
