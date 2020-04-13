@@ -1,7 +1,7 @@
 //variables mixins %placeholders
-$menuSelectWidth:300px;
-$menuSelectHeight:400px;
-$menuSelectMargin:30px;
+$menuSelectDesktop:(width:300px,height:400px,margin:30px);
+$menuSelectTablet:(width:250px,height:333px,margin:25px);
+$menuSelectMobile:(width:200px,height:266px,margin:20px);
 
 $menuWidth:520px;
 $menuHeight:970px;
@@ -15,9 +15,10 @@ $extremity-colors:(
 
 $menu-bg-colors:(menu1:#FCDFDB,menu2:#FFF5FE,menu3:#F9F9F9,menu4:#FDFFFD);
 
-$heights:( header:100px,main:1000px,footer:75px);
+$heights:( header:100px,footer:75px);
 
 $breakpoints:(tablet:992px,mobile:768px);
+
 
 @mixin tabletOnly{
 @media screen and (max-width: map-get($breakpoints, tablet )){
@@ -31,9 +32,32 @@ $breakpoints:(tablet:992px,mobile:768px);
     }
 }
 
+@mixin containerGridWidth{
+    width:(map-get($menuSelectDesktop,width)*2) + (map-get($menuSelectDesktop, margin )*5);
+    @include tabletOnly{
+    width:(map-get($menuSelectTablet,width)*2 )+ (map-get($menuSelectTablet, margin )*5);
+    }
+    @include mobileOnly{
+    width:(map-get($menuSelectMobile,width)*1) + (map-get($menuSelectMobile, margin )*2);
+    }
+}
 
 @mixin menuBlock{
-width:$menuSelectWidth;
-height:$menuSelectHeight;
-margin:$menuSelectMargin;
+
+    width:map-get($menuSelectDesktop,width);
+    height:map-get($menuSelectDesktop,height);
+    margin:map-get($menuSelectDesktop,margin);
+
+
+@include tabletOnly{
+    width:map-get($menuSelectTablet,width);
+    height:map-get($menuSelectTablet,height);
+    margin:map-get($menuSelectTablet,margin);
+}
+
+@include mobileOnly{
+    width:map-get($menuSelectMobile,width);
+    height:map-get($menuSelectMobile,height);
+    margin:map-get($menuSelectMobile,margin);
+}
 }

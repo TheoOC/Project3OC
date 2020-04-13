@@ -8,12 +8,14 @@
         justify-content:center;
         align-items:center;
         width:100%;
-        height:map-get($heights,main);
+        height:auto;
+        margin:auto;
         .containerGrid{
-            max-width:#{$menuSelectWidth * 3};
+            @include containerGridWidth;
+            height:auto;
+            display:flex;
             justify-content: center;
             align-items: center;
-            display:flex;
             flex-wrap:wrap;
             &__menu{
                 display:flex;
