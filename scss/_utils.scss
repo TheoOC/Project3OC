@@ -1,4 +1,5 @@
 //variables mixins %placeholders
+
 $menuSelectDesktop:(width:300px,height:400px,margin:30px);
 $menuSelectTablet:(width:250px,height:333px,margin:25px);
 $menuSelectMobile:(width:200px,height:266px,margin:20px);
@@ -6,6 +7,9 @@ $menuSelectMobile:(width:200px,height:266px,margin:20px);
 $menuWidth:520px;
 $menuHeight:970px;
 $menuPadding:65px;
+$menuDesktop:(width:520px,height:970px,padding:65px);
+$menuTablet:(width:520px,height:970px,padding:60px);
+$menuMobile:(width:400px,height:970px,padding:50px);
 
 $extremity-colors:(
     header:#579C87,
@@ -17,7 +21,7 @@ $menu-bg-colors:(menu1:#FCDFDB,menu2:#FFF5FE,menu3:#F9F9F9,menu4:#FDFFFD);
 
 $heights:( header:100px,footer:75px);
 
-$breakpoints:(tablet:992px,mobile:768px);
+$breakpoints:(tablet:768px,mobile:520px);
 
 
 @mixin tabletOnly{
@@ -32,7 +36,66 @@ $breakpoints:(tablet:992px,mobile:768px);
     }
 }
 
+@mixin articleLi{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    
+    @include tabletOnly{
+   
+    text-align:center;
+    }
+    @include mobileOnly{
+        display:flex;
+        flex-direction:column;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+@mixin articleUl{
+    @include tabletOnly{
+    }
+    @include mobileOnly{
+    }
+}
+
+@mixin articleImagesSizes{
+    max-width:35%;
+    max-height:35%;
+    @include tabletOnly{
+        max-width:30%;
+        max-height:30%;
+    }
+    @include mobileOnly{
+        max-width:28%;
+        max-height:28%;
+    }
+}
+
+@mixin containerMenuWidth{
+
+    max-width:map-get($menuDesktop,width);
+    min-height:map-get($menuDesktop,height);
+    padding:0 map-get($menuDesktop,padding) 0 map-get($menuDesktop,padding);
+
+    @include tabletOnly{
+        max-width:map-get($menuTablet,width);
+        min-height:map-get($menuTablet,height);
+        padding:0 map-get($menuTablet,padding) 0 map-get($menuTablet,padding);
+        margin: 0 8% 0 8%;
+    }
+
+    @include mobileOnly{
+        max-width:map-get($menuMobile,width);
+        min-height:map-get($menuMobile,height);
+        padding:0 map-get($menuMobile,padding) 0 map-get($menuMobile,padding);
+        margin: 0 5% 0 5%;
+    }
+}
+
 @mixin containerGridWidth{
+    //2 col so *2
     width:(map-get($menuSelectDesktop,width)*2) + (map-get($menuSelectDesktop, margin )*5);
     @include tabletOnly{
     width:(map-get($menuSelectTablet,width)*2 )+ (map-get($menuSelectTablet, margin )*5);

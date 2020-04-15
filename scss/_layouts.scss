@@ -66,22 +66,19 @@
         width:100%;
         display: flex;
         justify-content: center;
-        //align-items: center;
+        align-items: center;
 
         & .containerMenu{
-        max-width:$menuWidth;
-        min-height:$menuHeight;
+       @include containerMenuWidth;
+        
         display:flex;
         flex-direction:column;
-        justify-content: center;
         align-items: center;
-        padding:0 $menuPadding 0 $menuPadding;
-        min-width: $menuWidth;
-        min-height: $menuHeight;
-          
         background-color: map-get($menu-bg-colors, menu1 );
         margin-bottom: map-get( $heights ,footer );
+        box-shadow: 0 0 20px grey;
             & > img{
+                padding-top:60px;
                 width:60px;
                 height:60px;
                 margin:0;
@@ -92,28 +89,30 @@
             & article{
                 width:100%;
                 & .articleTitle{
+                    
                     display:flex;
                     flex-direction:row;
                     justify-content: space-between;
                     align-items: center;
                 }
                 & img{
+                    margin:40px 0px 10px 0px;
                     display:inline-block;
-                    width:160px;
-                    height:12px;
+                    vertical-align: middle;
+                    @include articleImagesSizes;
                 }
                 & h3{
+                    margin:40px 0px 10px 0px;
                     display:inline-block;
                 }
                 & ul{
+                    @include articleUl;
                     padding: 0;
                     margin: 0;
                     & li{
+                        @include articleLi;
                         
-                        display:flex;
-                        flex-direction:row;
-                        justify-content: space-between;
-                        align-items: center;
+                       
                     }
                 }
             }
