@@ -1,3 +1,12 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
 #main_wrapper, .menus_wrapper {
   display: flex;
   flex-direction: column;
@@ -131,15 +140,6 @@
     height: 38px;
     margin-right: 5px; }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent; }
-
 #main_wrapper main {
   display: flex;
   justify-content: center;
@@ -166,7 +166,8 @@ html, body {
       position: relative;
       flex-direction: column;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      box-shadow: 0 0 20px #9E9E9E; }
       #main_wrapper main .containerGrid__menu a {
         position: absolute;
         width: 100%;
@@ -175,6 +176,15 @@ html, body {
         left: 0;
         text-decoration: none;
         z-index: 10; }
+        #main_wrapper main .containerGrid__menu a ~ * {
+          transition-duration: 400ms;
+          transition-timing-function: ease-in-out;
+          transition-property: all;
+          transform: scale(1);
+          opacity: 1; }
+        #main_wrapper main .containerGrid__menu a:hover ~ * {
+          transform: scale(1.13);
+          opacity: 0.88; }
       #main_wrapper main .containerGrid__menu--note {
         background-color: #FCDFDB;
         width: 300px;
@@ -249,3 +259,25 @@ html, body {
     text-align: center;
     width: 250px;
     background-color: #579C87; }
+
+/*
+.menus_wrapper{
+
+    & main{
+        & .containerMenu{
+            &__menu1{
+
+            }
+            &__menu2{
+                
+            }
+            &__menu3{
+                
+            }
+            &__menu4{
+                
+            }
+        }
+    }
+}
+*/

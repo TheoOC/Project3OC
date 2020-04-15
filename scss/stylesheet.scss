@@ -1,5 +1,17 @@
-@import 'utils';
-@import 'base';
-@import 'layouts';
-@import 'components';
-@import 'pages';
+//base
+@import 'base/_base.scss';
+
+//components
+@import 'components/_components.scss';
+
+//utils
+@import 'utils/_vars.scss';
+@import 'utils/_mixins.scss';
+
+//layouts
+@import 'layouts/_header_footer.scss';
+@import 'layouts/_menus.scss';
+
+//layouts
+@import 'pages/_main_menu.scss';
+@import 'pages/_menus_styles.scss'
