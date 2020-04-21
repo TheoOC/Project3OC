@@ -1,0 +1,83 @@
+//Block Elements Modifiers that we can reuse
+
+.menus_wrapper{
+    
+    & .menuTitle{
+        margin:auto;
+        & h1{
+            margin:50px 0 20px 0;
+        }
+        
+    }
+    & main{
+        width:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & .containerMenu{
+       @include containerMenuWidth;
+        
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        background-color: map-get($menu-bg-colors, menu1 );
+        
+        box-shadow: 0 0 20px grey;
+            & > img{
+                padding-top:60px;
+                width:60px;
+                height:60px;
+                margin:0;
+            }
+            & > h2{
+                margin: 10px 0 10px 0;
+            }
+            & article{
+                width:100%;
+                & .articleTitle{
+                    
+                    display:flex;
+                    flex-direction:row;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                & img{
+                    margin:40px 0px 10px 0px;
+                    display:inline-block;
+                    vertical-align: middle;
+                    @include articleImagesSizes;
+                }
+                & h3{
+                    margin:40px 0px 10px 0px;
+                    display:inline-block;
+                }
+                & ul{
+                    @include articleUl;
+                    padding: 0;
+                    margin: 0;
+                    & li{
+                        @include articleLi;
+                        
+                       
+                    }
+                }
+            }
+        }
+    }
+
+    & .ending{
+        width:100%;
+        margin:40px 0 0 0;
+        display:flex;
+        flex-direction:row;
+        justify-content: center;
+        align-items: center;
+
+       & img{
+            width:38px;
+            height:38px;
+            margin-right:5px;
+       }
+    }
+}

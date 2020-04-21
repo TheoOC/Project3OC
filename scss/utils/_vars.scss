@@ -1,0 +1,29 @@
+//variables mixins %placeholders
+
+$menuSelectDesktop:(width:300px,height:400px,margin:30px);
+$menuSelectTablet:(width:250px,height:333px,margin:25px);
+$menuSelectMobile:(width:200px,height:266px,margin:20px);
+
+$menuWidth:520px;
+$menuHeight:970px;
+$menuPadding:65px;
+$menuDesktop:(width:520px,height:970px,padding:65px);
+$menuTablet:(width:520px,height:970px,padding:60px);
+$menuMobile:(width:400px,height:970px,padding:50px);
+
+$main-text-color:#FDCB46;
+
+$extremity-colors:(
+    header:#579C87,
+    prochainement:#579C87,
+    footer:#579C87,
+);
+
+$menu-bg-colors:(menu1:#FCDFDB,menu2:#FFF5FE,menu3:#F9F9F9,menu4:#FDFFFD);
+
+$heights:( header:100px,footer:75px);
+
+$breakpoints:(tablet:768px,mobile:520px);
+
+
+

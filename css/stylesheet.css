@@ -1,3 +1,19 @@
+/*menu 1 title font: 
+https://fonts.google.com/specimen/Devonshire?query=devonshire
+https://www.fontzillion.com/fonts/studio-typo/typo-comics-demo?utm_source=fontsquirrel.com&utm_medium=matcherator_link&utm_campaign=typocomicsdemo  (bold demp regular)
+https://www.fontzillion.com/fonts/fontpanda/lara-prints?utm_source=fontsquirrel.com&utm_medium=matcherator_link&utm_campaign=laraprints
+
+menu 2 title font:
+https://www.fontsquirrel.com/fonts/croissant-one?utm_source=fontsquirrel.com&utm_medium=matcherator_link&utm_campaign=croissantone
+https://www.fontsquirrel.com/fonts/el-messiri?utm_source=fontsquirrel.com&utm_medium=matcherator_link&utm_campaign=elmessiri (el messiri bold)
+https://www.fontzillion.com/fonts/arkandis-digital-foundry/aurelis-adf-no2-std?utm_source=fontsquirrel.com&utm_medium=matcherator_link&utm_campaign=aurelisadfno2std  (Aurelis ADF No2 Std Bold)
+ 
+menu 3 title font:
+https://fonts.google.com/specimen/Dancing+Script
+
+menu 4 title font:
+
+*/
 html, body {
   margin: 0;
   padding: 0;
@@ -6,6 +22,10 @@ html, body {
   font-size: 100%;
   vertical-align: baseline;
   background: transparent; }
+
+@keyframes ellipsis-animation {
+  100% {
+    width: 1.2em; } }
 
 #main_wrapper, .menus_wrapper {
   display: flex;
@@ -62,24 +82,30 @@ html, body {
     max-width: 520px;
     min-height: 970px;
     padding: 0 65px 0 65px;
+    margin-bottom: 90px;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #FCDFDB;
-    margin-bottom: 75px;
     box-shadow: 0 0 20px grey; }
     @media screen and (max-width: 768px) {
       .menus_wrapper main .containerMenu {
         max-width: 520px;
         min-height: 970px;
         padding: 0 60px 0 60px;
-        margin: 0 8% 0 8%; } }
+        margin-top: 0;
+        margin-right: 8%;
+        margin-bottom: 90px;
+        margin-left: 8%; } }
     @media screen and (max-width: 520px) {
       .menus_wrapper main .containerMenu {
         max-width: 400px;
         min-height: 970px;
         padding: 0 50px 0 50px;
-        margin: 0 5% 0 5%; } }
+        margin-top: 0;
+        margin-right: 5%;
+        margin-bottom: 90px;
+        margin-left: 5%; } }
     .menus_wrapper main .containerMenu > img {
       padding-top: 60px;
       width: 60px;
@@ -177,14 +203,14 @@ html, body {
         text-decoration: none;
         z-index: 10; }
         #main_wrapper main .containerGrid__menu a ~ * {
-          transition-duration: 400ms;
-          transition-timing-function: ease-in-out;
+          transition-duration: 330ms;
+          transition-timing-function: ease-in;
           transition-property: all;
           transform: scale(1);
           opacity: 1; }
         #main_wrapper main .containerGrid__menu a:hover ~ * {
           transform: scale(1.13);
-          opacity: 0.88; }
+          opacity: 0.70; }
       #main_wrapper main .containerGrid__menu--note {
         background-color: #FCDFDB;
         width: 300px;
@@ -248,17 +274,39 @@ html, body {
             width: 200px;
             height: 266px;
             margin: 20px; } }
-#main_wrapper .containerNext {
+#main_wrapper .containerSoon {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   min-height: 15%;
-  margin-bottom: 75px; }
-  #main_wrapper .containerNext .prochainement {
+  margin-bottom: 90px; }
+  #main_wrapper .containerSoon .prochainement {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #FDCB46;
     text-align: center;
+    height: 50px;
     width: 250px;
+    border-radius: 10px;
     background-color: #579C87; }
+    #main_wrapper .containerSoon .prochainement p {
+      margin: 0 0 0 45px;
+      padding: 0;
+      font-size: 1.5em; }
+    #main_wrapper .containerSoon .prochainement p::after {
+      display: inline-block;
+      content: "\2026";
+      margin: 0 0 0 50px 0;
+      padding: 0;
+      overflow: hidden;
+      vertical-align: bottom;
+      width: 0px;
+      animation-name: ellipsis-animation;
+      animation-duration: 2000ms;
+      animation-timing-function: steps(4, end);
+      animation-iteration-count: infinite; }
 
 /*
 .menus_wrapper{
