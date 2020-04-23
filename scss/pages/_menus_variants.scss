@@ -1,0 +1,14 @@
+.containerMenu{
+    &--bg1{
+        background-color: map-get($menu-bg-colors, menu1 );
+     }
+    &--bg2{
+        background-color: map-get($menu-bg-colors, menu2 );
+    }
+    &--bg3{
+        background-color: map-get($menu-bg-colors, menu3 );
+    }
+    &--bg4{
+        background-color: map-get($menu-bg-colors, menu4 );
+    }
+}

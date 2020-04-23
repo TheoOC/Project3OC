@@ -1,0 +1,45 @@
+
+.typo{
+    &__select-menu{
+        font-size: medium;
+        color:black;
+        font-style: normal;
+        text-align: center;
+        &--menu1{
+           & h3{
+            font-family: "DevonshireRegular",Arial,sans-serif;
+            font-size:2em;
+           }
+           & h2{
+            
+            font-size:2em;
+            text-transform: uppercase;
+            margin:5px 0 5px 0;
+           }
+        }
+        &--menu2{
+            & h3{
+
+            }
+            & h2{
+                
+            }
+        }
+        &--menu3{
+            & h3{
+
+            }
+            & h2{
+                
+            }
+        }
+        &--menu4{
+            & h3{
+
+            }
+            & h2{
+                
+            }
+        }
+    }
+}

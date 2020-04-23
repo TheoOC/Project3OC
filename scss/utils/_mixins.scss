@@ -121,4 +121,9 @@
     animation-timing-function: steps(4,end);
     animation-iteration-count: infinite;
 }
-
+@mixin wiggle-animation{
+    animation-name:wiggle-animation;
+    animation-fill-mode: both;
+    animation-duration:300ms;
+    animation-iteration-count: infinite;
+}

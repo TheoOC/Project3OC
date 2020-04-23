@@ -1,5 +1,5 @@
 //base
-@import 'base/_base.scss';
+@import 'base/_fonts.scss';
 
 //components
 @import 'components/_components.scss';
@@ -12,7 +12,9 @@
 //layouts
 @import 'layouts/_header_footer.scss';
 @import 'layouts/_menus.scss';
+@import 'layouts/_typo.scss';
 
-//layouts
+//pages
 @import 'pages/_main_menu.scss';
-@import 'pages/_menus_styles.scss'
+@import 'pages/_menus_variants.scss';
+

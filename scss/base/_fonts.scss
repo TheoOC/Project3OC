@@ -21,7 +21,12 @@ menu 4 title font:
 */
 
 
-@font-face {
-    font-family: 'Montserrat-Light';
-    src:url(../fonts/Montserrat-Light.otf) format('otf');
+@font-face{
+    font-family: 'missySharpieItalic';
+    src: url('../fonts/missy-sharpie-italic.ttf');
+}
+
+@font-face{
+    font-family: 'DevonshireRegular';
+    src: url('../fonts/Devonshire-Regular.ttf');
 }

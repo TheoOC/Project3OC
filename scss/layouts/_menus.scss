@@ -15,75 +15,6 @@
         justify-content: center;
         align-items: center;
 
-        & .containerMenu{
-       @include containerMenuWidth;
-        
-        display:flex;
-        flex-direction:column;
-        align-items: center;
-        background-color: map-get($menu-bg-colors, menu1 );
-        
-        box-shadow: 0 0 20px grey;
-            & > img{
-                padding-top:60px;
-                width:60px;
-                height:60px;
-                margin:0;
-            }
-            & > h2{
-                margin: 10px 0 10px 0;
-            }
-            & article{
-                width:100%;
-                & .articleTitle{
-                    
-                    display:flex;
-                    flex-direction:row;
-                    justify-content: space-between;
-                    align-items: center;
-                }
-                & img{
-                    margin:40px 0px 10px 0px;
-                    display:inline-block;
-                    vertical-align: middle;
-                    @include articleImagesSizes;
-                }
-                & h3{
-                    margin:40px 0px 10px 0px;
-                    position:relative;
-                    &::after{
-                        content:'';
-                        position:absolute;
-                        bottom:0;
-                        left:0;
-                        width:100%;
-                        border-bottom:1px solid black;
-                        transform:scale(0);
-                        transition-duration:300ms;
-                        transition-timing-function: ease-out;
-                        transition-property: transform;
-                        transform-origin: bottom right;
-                    }
-                    &:hover::after{
-                        transform:scale(1);
-                        transform-origin: bottom left;
-                    }
-                   
-                }
-                & ul{
-                    @include articleUl;
-                    padding: 0;
-                    margin: 0;
-                    & li{
-                        @include articleLi;
-                        
-                       
-                    }
-                }
-            }
-        }
-    }
-
     & .ending{
         width:100%;
         margin:40px 0 0 0;
@@ -99,3 +30,78 @@
        }
     }
 }
+
+
+.containerMenu{
+    @include containerMenuWidth;
+     display:flex;
+     flex-direction:column;
+     justify-content: center;
+     &--menu-variant1{
+        justify-content: flex-end;
+     }
+       
+     align-items: center;
+     
+     
+     box-shadow: 0 0 20px grey;
+         & > img{
+             padding-top:60px;
+             width:60px;
+             height:60px;
+             margin:0;
+         }
+         & > h2{
+             margin: 10px 0 10px 0;
+         }
+         & article{
+             width:100%;
+             & .articleTitle{
+                 
+                 display:flex;
+                 flex-direction:row;
+                 justify-content: space-between;
+                 align-items: center;
+             }
+             & img{
+                 margin:40px 0px 10px 0px;
+                 display:inline-block;
+                 vertical-align: middle;
+                 @include articleImagesSizes;
+             }
+             & h3{
+                 margin:40px 0px 10px 0px;
+                 position:relative;
+                 text-align:center;
+                 &::after{
+                     content:'';
+                     position:absolute;
+                     bottom:0;
+                     left:0;
+                     width:100%;
+                     border-bottom:1px solid black;
+                     transform:scale(0);
+                     transition-duration:300ms;
+                     transition-timing-function: ease-out;
+                     transition-property: transform;
+                     transform-origin: bottom right;
+                 }
+                 &:hover::after{
+                     transform:scale(1);
+                     transform-origin: bottom left;
+                 }
+                
+             }
+             & ul{
+                 @include articleUl;
+                 padding: 0;
+                 margin: 0;
+                 & li{
+                     @include articleLi;
+                     
+                    
+                 }
+             }
+         }
+     }
+ }
