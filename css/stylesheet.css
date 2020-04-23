@@ -14,6 +14,10 @@ https://fonts.google.com/specimen/Dancing+Script
 menu 4 title font:
 
 */
+@font-face {
+  font-family: 'Montserrat-Light';
+  src: url(../fonts/Montserrat-Light.otf) format("otf"); }
+
 html, body {
   margin: 0;
   padding: 0;
@@ -44,6 +48,7 @@ html, body {
     #main_wrapper header a, .menus_wrapper header a {
       margin: auto; }
   #main_wrapper footer, .menus_wrapper footer {
+    z-index: 10;
     background-color: #579C87;
     display: flex;
     flex-direction: row;
@@ -56,15 +61,16 @@ html, body {
     left: 0;
     width: 100%; }
     #main_wrapper footer .ml, .menus_wrapper footer .ml {
-      color: #FDCB46; }
+      color: #FDCB46;
+      position: relative; }
       #main_wrapper footer .ml a, .menus_wrapper footer .ml a {
         position: absolute;
-        width: 50%;
+        width: 100%;
         height: 100%;
         top: 0;
         left: 0;
         text-decoration: none;
-        z-index: 10; }
+        z-index: 15; }
     #main_wrapper footer .contact, .menus_wrapper footer .contact {
       color: #FDCB46; }
 
@@ -136,7 +142,22 @@ html, body {
             max-height: 28%; } }
       .menus_wrapper main .containerMenu article h3 {
         margin: 40px 0px 10px 0px;
-        display: inline-block; }
+        position: relative; }
+        .menus_wrapper main .containerMenu article h3::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          border-bottom: 1px solid black;
+          transform: scale(0);
+          transition-duration: 300ms;
+          transition-timing-function: ease-out;
+          transition-property: transform;
+          transform-origin: bottom right; }
+        .menus_wrapper main .containerMenu article h3:hover::after {
+          transform: scale(1);
+          transform-origin: bottom left; }
       .menus_wrapper main .containerMenu article ul {
         padding: 0;
         margin: 0; }
@@ -201,7 +222,7 @@ html, body {
         top: 0;
         left: 0;
         text-decoration: none;
-        z-index: 10; }
+        z-index: 5; }
         #main_wrapper main .containerGrid__menu a ~ * {
           transition-duration: 330ms;
           transition-timing-function: ease-in;
@@ -292,6 +313,7 @@ html, body {
     border-radius: 10px;
     background-color: #579C87; }
     #main_wrapper .containerSoon .prochainement p {
+      font-family: 'Montserrat-Light',Arial,serif;
       margin: 0 0 0 45px;
       padding: 0;
       font-size: 1.5em; }
