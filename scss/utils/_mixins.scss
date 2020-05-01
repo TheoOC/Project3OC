@@ -36,11 +36,11 @@
 }
     
 @mixin articleImagesSizes{
-        max-width:35%;
-        max-height:35%;
+        max-width:30%;
+        max-height:30%;
         @include tabletOnly{
-            max-width:30%;
-            max-height:30%;
+            max-width:29%;
+            max-height:29%;
         }
         @include mobileOnly{
             max-width:28%;
@@ -54,6 +54,8 @@
         min-height:map-get($menuDesktop,height);
         padding:0 map-get($menuDesktop,padding) 0 map-get($menuDesktop,padding);
         margin-bottom: map-get( $heights ,footer ) + 15px;
+        margin-right:30px;
+        margin-left:30px;
         @include tabletOnly{
             max-width:map-get($menuTablet,width);
             min-height:map-get($menuTablet,height);

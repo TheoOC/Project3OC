@@ -38,8 +38,8 @@
                        
                         //anim
                         & ~ * {
-                            transition-duration: 330ms;
-                            transition-timing-function: ease-in;
+                            transition-duration: 200ms;
+                            transition-timing-function: ease-out;
                             transition-property: all;
                             transform:scale(1);
                             opacity: 1;

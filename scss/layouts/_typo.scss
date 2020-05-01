@@ -1,7 +1,8 @@
 
 .typo{
+
     &__select-menu{
-    font-size: 1.3em;
+    font-size: normal;
     color:black;
     font-style: normal;
     text-align: center;
@@ -17,11 +18,11 @@
             
            }
            & h2{
+            font-size: 2em;
             margin:0;
             padding:0;
             font-family:'segoe-print', Arial, Serif;
             text-transform: uppercase;
-
            }
         }
         &--menu2{
@@ -32,10 +33,12 @@
                 
             }
             & h2{
+                font-size: 2em;
                 margin:0;
                 padding:0;
                 font-family: 'CasusPro-Bold', Arial, Serif;
                 color:map-get(map-get($menu-select-colors,menu2),sColor);
+                
             }
         }
         &--menu3{
@@ -46,10 +49,12 @@
                 @include text-gradient(45deg,map-get(map-get($menu-select-colors,menu3),sColor),map-get(map-get($menu-select-colors,menu3),eColor));
             }
             & h2{
+                font-size: 2em;
                 margin:0;
                 padding:0;
                 font-family:'segoe-print', Arial, Serif;
                 color:map-get(map-get($menu-select-colors,menu3),eColor);
+                
             }
         }
         &--menu4{
@@ -60,13 +65,60 @@
                 @include text-gradient(45deg,map-get(map-get($menu-select-colors,menu4),sColor),map-get(map-get($menu-select-colors,menu4),eColor));
             }
             & h2{
+                font-size: 2em;
                 margin:0;
                 padding:0;
                 font-family:'segoe-print', Arial, Serif;
                 color:map-get(map-get($menu-select-colors,menu4),sColor);
+                
             }
         }
     }
+
+    &__menus{
+        &__menu1{
+            font-family:'segoe-print';
+            font-size:normal;
+            
+            &--title{
+                font-family:'Devonshire-Regular';
+                font-size:2.5em;
+                font-weight: lighter;
+            }
+            &--subheading{
+                font-family:'segoe-print';
+                font-weight: bolder;
+                font-size:1.5em;
+            }
+            & ul > li > p:not(:first-child){
+                font-weight: bolder;
+                font-size:1.3em;
+            }
+           
+        }
+        &__menu3{
+            font-family:'segoe-print';
+            font-size:normal;
+            font-weight:lighter;
+            &--title{
+                font-family:'DancingScript-Regular';
+                @include text-gradient(45deg,map-get(map-get($menu-select-colors,menu3),sColor),map-get(map-get($menu-select-colors,menu3),eColor));
+                font-size:4em;
+                font-weight: lighter;
+            }
+            &--subheading{
+                font-family:'segoe-print';
+                font-weight:lighter;
+                
+            }
+            & ul > li > p:not(:first-child){
+                font-weight:lighter;
+                
+            }
+           
+        }
+    }
+   
 
     &__footer{
         font-family: 'PatriciaGothic-SemiBold';
@@ -82,4 +134,5 @@
         font-family:'Stem-Regular';
         color: $main-text-color;
     }
+    
 }
