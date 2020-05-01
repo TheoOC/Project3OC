@@ -15,7 +15,7 @@ $main-text-color:#FDCB46;
 
 $extremity-colors:(
     header:#579C87,
-    prochainement:#579C87,
+    soon:#579C87,
     footer:#579C87,
 );
 
@@ -25,5 +25,10 @@ $heights:( header:100px,footer:75px);
 
 $breakpoints:(tablet:768px,mobile:520px);
 
+$menu-select-colors:(menu1:(color1:#3C1218)
+,menu2:(sColor: #D8852E, eColor:#905BFD)
+,menu3:(sColor: #0431DF, eColor:#0887FB)
+,menu4:(sColor: #3D9339, eColor:#BFFF7E)
+);
 
 

@@ -127,3 +127,12 @@
     animation-duration:300ms;
     animation-iteration-count: infinite;
 }
+
+@mixin text-gradient($direction:to right,$first-color:#000000,$second-color:#000000){
+    background-image: linear-gradient($direction,$first-color,$second-color);
+    background-size:100%;
+    -webkit-background-clip: text;
+    -moz-background-clip:text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color:transparent;
+}

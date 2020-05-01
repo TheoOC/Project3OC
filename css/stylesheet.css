@@ -1,26 +1,38 @@
-/*menu 1 title font: 
-https://fonts.google.com/specimen/Devonshire?query=devonshire
-https://www.fontzillion.com/fonts/studio-typo/typo-comics-demo?utm_source=fontsquirrel.com&utm_medium=matcherator_link&utm_campaign=typocomicsdemo  (bold demp regular)
-https://www.fontzillion.com/fonts/fontpanda/lara-prints?utm_source=fontsquirrel.com&utm_medium=matcherator_link&utm_campaign=laraprints
-
-menu 2 title font:
-https://www.fontsquirrel.com/fonts/croissant-one?utm_source=fontsquirrel.com&utm_medium=matcherator_link&utm_campaign=croissantone
-https://www.fontsquirrel.com/fonts/el-messiri?utm_source=fontsquirrel.com&utm_medium=matcherator_link&utm_campaign=elmessiri (el messiri bold)
-https://www.fontzillion.com/fonts/arkandis-digital-foundry/aurelis-adf-no2-std?utm_source=fontsquirrel.com&utm_medium=matcherator_link&utm_campaign=aurelisadfno2std  (Aurelis ADF No2 Std Bold)
- 
-menu 3 title font:
-https://fonts.google.com/specimen/Dancing+Script
-
-menu 4 title font:
-
-*/
 @font-face {
-  font-family: 'missySharpieItalic';
-  src: url("../fonts/missy-sharpie-italic.ttf"); }
-
-@font-face {
-  font-family: 'DevonshireRegular';
+  font-family: 'Devonshire-Regular';
   src: url("../fonts/Devonshire-Regular.ttf"); }
+
+@font-face {
+  font-family: 'segoe-print';
+  src: url("../fonts/segoeprb.ttf"); }
+
+@font-face {
+  font-family: 'CroissantOne-Regular';
+  src: url("../fonts/CroissantOne-Regular.ttf"); }
+
+@font-face {
+  font-family: 'CasusPro-Bold';
+  src: url("../fonts/CasusPro-Bold.ttf"); }
+
+@font-face {
+  font-family: 'DancingScript-Regular';
+  src: url("../fonts/DancingScript-Regular.ttf"); }
+
+@font-face {
+  font-family: 'KaushanScript-Regular';
+  src: url("../fonts/KaushanScript-Regular.ttf"); }
+
+@font-face {
+  font-family: 'PatriciaGothic-SemiBold';
+  src: url(../fonts/PatriciaGothic-SemiBold.otf); }
+
+@font-face {
+  font-family: 'MYingHei-PRCW48W7';
+  src: url(../fonts/MYingHei-PRCW48W7.ttf); }
+
+@font-face {
+  font-family: 'Stem-Regular';
+  src: url(../fonts/Stem-Regular.ttf); }
 
 html, body {
   margin: 0;
@@ -77,7 +89,6 @@ html, body {
     left: 0;
     width: 100%; }
     #main_wrapper footer .ml, .menus_wrapper footer .ml {
-      color: #FDCB46;
       position: relative; }
       #main_wrapper footer .ml:hover, .menus_wrapper footer .ml:hover {
         animation-name: wiggle-animation;
@@ -92,18 +103,16 @@ html, body {
         left: 0;
         text-decoration: none;
         z-index: 15; }
-    #main_wrapper footer .contact, .menus_wrapper footer .contact {
-      color: #FDCB46; }
-      #main_wrapper footer .contact:hover, .menus_wrapper footer .contact:hover {
-        animation-name: wiggle-animation;
-        animation-fill-mode: both;
-        animation-duration: 300ms;
-        animation-iteration-count: infinite; }
+    #main_wrapper footer .contact:hover, .menus_wrapper footer .contact:hover {
+      animation-name: wiggle-animation;
+      animation-fill-mode: both;
+      animation-duration: 300ms;
+      animation-iteration-count: infinite; }
 
 .menus_wrapper .menuTitle {
   margin: auto; }
   .menus_wrapper .menuTitle h1 {
-    margin: 50px 0 20px 0; }
+    margin: 50px 0 25px 0; }
 
 .menus_wrapper main {
   width: 100%;
@@ -217,17 +226,81 @@ html, body {
             justify-content: space-between;
             align-items: center; } }
 .typo__select-menu {
-  font-size: medium;
+  font-size: 1.3em;
   color: black;
   font-style: normal;
   text-align: center; }
-  .typo__select-menu--menu1 h3 {
-    font-family: "DevonshireRegular",Arial,sans-serif;
-    font-size: 2em; }
-  .typo__select-menu--menu1 h2 {
-    font-size: 2em;
-    text-transform: uppercase;
-    margin: 5px 0 5px 0; }
+  .typo__select-menu--menu1 {
+    color: #3C1218; }
+    .typo__select-menu--menu1 h3 {
+      font-weight: lighter;
+      margin: 3px;
+      padding: 0;
+      font-size: 1.5em;
+      font-family: 'Devonshire-Regular', Arial, Serif; }
+    .typo__select-menu--menu1 h2 {
+      margin: 0;
+      padding: 0;
+      font-family: 'segoe-print', Arial, Serif;
+      text-transform: uppercase; }
+  .typo__select-menu--menu2 h3 {
+    font-weight: lighter;
+    font-family: 'CroissantOne-Regular', Arial, Serif;
+    background-image: linear-gradient(45deg, #D8852E, #905BFD);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent; }
+  .typo__select-menu--menu2 h2 {
+    margin: 0;
+    padding: 0;
+    font-family: 'CasusPro-Bold', Arial, Serif;
+    color: #D8852E; }
+  .typo__select-menu--menu3 h3 {
+    font-size: 1.7em;
+    font-weight: lighter;
+    font-family: 'DancingScript-Regular', Arial, Serif;
+    background-image: linear-gradient(45deg, #0431DF, #0887FB);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent; }
+  .typo__select-menu--menu3 h2 {
+    margin: 0;
+    padding: 0;
+    font-family: 'segoe-print', Arial, Serif;
+    color: #0887FB; }
+  .typo__select-menu--menu4 h3 {
+    font-size: 1.7em;
+    font-weight: lighter;
+    font-family: 'KaushanScript-Regular',Arial,Serif;
+    background-image: linear-gradient(45deg, #3D9339, #BFFF7E);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent; }
+  .typo__select-menu--menu4 h2 {
+    margin: 0;
+    padding: 0;
+    font-family: 'segoe-print', Arial, Serif;
+    color: #3D9339; }
+
+.typo__footer {
+  font-family: 'PatriciaGothic-SemiBold';
+  color: #FDCB46;
+  margin: 0;
+  padding: 0; }
+
+.typo__menuTitle {
+  font-family: 'MYingHei-PRCW48W7'; }
+
+.typo__soon {
+  font-size: 1.6em;
+  font-family: 'Stem-Regular';
+  color: #FDCB46; }
 
 #main_wrapper main {
   display: flex;
@@ -344,20 +417,18 @@ html, body {
   width: 100%;
   min-height: 15%;
   margin-bottom: 90px; }
-  #main_wrapper .containerSoon .prochainement {
+  #main_wrapper .containerSoon .soon {
     display: flex;
     flex-direction: row;
     align-items: center;
-    color: #FDCB46;
-    text-align: center;
     height: 50px;
     width: 250px;
     border-radius: 10px;
     background-color: #579C87; }
-    #main_wrapper .containerSoon .prochainement p {
-      margin: 0 0 0 45px;
+    #main_wrapper .containerSoon .soon p {
+      margin: 0 0 0 27px;
       padding: 0; }
-    #main_wrapper .containerSoon .prochainement p::after {
+    #main_wrapper .containerSoon .soon p::after {
       display: inline-block;
       content: "\2026";
       margin: 0 0 0 50px 0;

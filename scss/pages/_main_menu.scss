@@ -82,19 +82,18 @@
             width:100%;
             min-height:15%;
             margin-bottom:map-get($heights,footer) + 15px;
-            .prochainement{
+            .soon{
                 display:flex;
                 flex-direction:row;
                 align-items: center;
-                color: $main-text-color;
-                text-align: center;
+                
                 height:50px;
                 width:250px;
                 border-radius: 10px;
-                background-color: map-get($extremity-colors,prochainement);
+                background-color: map-get($extremity-colors,soon);
                 
                 & p{
-                margin:0 0 0 45px;
+                margin:0 0 0 27px;
                 padding:0;
                 }
                     & p::after{

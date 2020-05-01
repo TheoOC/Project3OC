@@ -37,7 +37,6 @@
                 &:hover{
                    @include wiggle-animation;
                     }
-            color:$main-text-color;
             position:relative;
                 & a{
                     position: absolute;
@@ -54,7 +53,6 @@
                 &:hover{
                     @include wiggle-animation;
                      }
-            color:$main-text-color;
             }
         }
 }
