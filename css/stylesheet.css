@@ -15,6 +15,10 @@
   src: url("../fonts/CasusPro-Bold.ttf"); }
 
 @font-face {
+  font-family: 'CasusPro-Light';
+  src: url(../fonts/CasusPro-Light.ttf); }
+
+@font-face {
   font-family: 'DancingScript-Regular';
   src: url("../fonts/DancingScript-Regular.ttf"); }
 
@@ -135,6 +139,7 @@ html, body {
   max-width: 600px;
   min-height: 1100px;
   padding: 0 65px 0 65px;
+  margin-top: 0;
   margin-bottom: 90px;
   margin-right: 30px;
   margin-left: 30px;
@@ -146,21 +151,21 @@ html, body {
   @media screen and (max-width: 768px) {
     .menus_wrapper .containerMenu {
       max-width: 520px;
-      min-height: 970px;
+      min-height: 1100px;
       padding: 0 60px 0 60px;
       margin-top: 0;
-      margin-right: 8%;
       margin-bottom: 90px;
-      margin-left: 8%; } }
+      margin-right: 30px;
+      margin-left: 30px; } }
   @media screen and (max-width: 520px) {
     .menus_wrapper .containerMenu {
       max-width: 400px;
-      min-height: 970px;
+      min-height: 1100px;
       padding: 0 50px 0 50px;
       margin-top: 0;
-      margin-right: 5%;
       margin-bottom: 90px;
-      margin-left: 5%; } }
+      margin-right: 30px;
+      margin-left: 30px; } }
   .menus_wrapper .containerMenu > h2 {
     margin: 100px 0 50px 0; }
   .menus_wrapper .containerMenu--menu-variant1 {
@@ -225,13 +230,18 @@ html, body {
         min-height: 36px; }
         @media screen and (max-width: 768px) {
           .menus_wrapper .containerMenu article ul li {
-            text-align: center; } }
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left; } }
         @media screen and (max-width: 520px) {
           .menus_wrapper .containerMenu article ul li {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            align-items: center; } }
+            align-items: center;
+            text-align: center; } }
         .menus_wrapper .containerMenu article ul li p {
           margin: 0;
           padding: 0; }
@@ -278,7 +288,8 @@ html, body {
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent; }
+    -moz-text-fill-color: transparent;
+    padding: 0 9px 0 9px; }
   .typo__select-menu--menu3 h2 {
     font-size: 2em;
     margin: 0;
@@ -294,7 +305,8 @@ html, body {
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent; }
+    -moz-text-fill-color: transparent;
+    padding: 0 4px 0 4px; }
   .typo__select-menu--menu4 h2 {
     font-size: 2em;
     margin: 0;
@@ -303,25 +315,54 @@ html, body {
     color: #3D9339; }
 
 .typo__menus__menu1 {
-  font-family: 'segoe-print';
+  font-family: 'segoe-print', Arial, Serif;
   font-weight: normal; }
   .typo__menus__menu1--title {
-    font-family: 'Devonshire-Regular';
+    font-family: 'Devonshire-Regular', Arial, Serif;
     font-size: 2.5em;
-    font-weight: lighter; }
+    font-weight: lighter;
+    text-align: center; }
   .typo__menus__menu1--subheading {
-    font-family: 'segoe-print';
+    font-family: 'segoe-print', Arial, Serif;
     font-weight: bolder;
     font-size: 1.5em; }
   .typo__menus__menu1 ul > li > p:not(:first-child) {
     font-weight: bolder;
     font-size: 1.3em; }
 
+.typo__menus__menu2 {
+  font-family: 'CasusPro-Light', Arial, Serif;
+  font-weight: lighter; }
+  .typo__menus__menu2--title {
+    font-weight: lighter;
+    font-family: 'CroissantOne-Regular', Arial, Serif;
+    background-image: linear-gradient(45deg, #D8852E, #905BFD);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    font-size: 2.2em;
+    text-align: center; }
+  .typo__menus__menu2--subheading {
+    font-family: 'CasusPro-Bold', Arial, Serif;
+    font-weight: bolder;
+    font-size: 1.1em; }
+  .typo__menus__menu2 ul > li > p:not(:first-child) {
+    font-weight: bolder;
+    font-size: 1.3em; }
+  .typo__menus__menu2--color1 {
+    color: #C67412; }
+  .typo__menus__menu2--color2 {
+    color: #A56799; }
+  .typo__menus__menu2--color3 {
+    color: #6E4CCC; }
+
 .typo__menus__menu3 {
-  font-family: 'segoe-print';
+  font-family: 'segoe-print', Arial, Serif;
   font-weight: lighter; }
   .typo__menus__menu3--title {
-    font-family: 'DancingScript-Regular';
+    font-family: 'DancingScript-Regular', Arial, Serif;
     background-image: linear-gradient(45deg, #0431DF, #0887FB);
     background-size: 100%;
     -webkit-background-clip: text;
@@ -329,25 +370,51 @@ html, body {
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     font-size: 4em;
-    font-weight: lighter; }
+    font-weight: lighter;
+    padding: 0 9px 0 9px;
+    text-align: center; }
   .typo__menus__menu3--subheading {
-    font-family: 'segoe-print';
+    font-family: 'segoe-print', Arial, Serif;
     font-weight: lighter; }
   .typo__menus__menu3 ul > li > p:not(:first-child) {
-    font-weight: lighter; }
+    font-weight: normal;
+    font-size: 1.3em; }
+
+.typo__menus__menu4 {
+  font-family: 'segoe-print', Arial, Serif;
+  font-weight: normal;
+  font-size: 1em; }
+  .typo__menus__menu4--title {
+    font-family: 'segoe-print', Arial, Serif;
+    background-image: linear-gradient(45deg, #3D9339, #BFFF7E);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    font-weight: normal;
+    font-size: 3em;
+    padding: 0 4px 0 4px;
+    text-align: center; }
+  .typo__menus__menu4--subheading {
+    font-family: 'segoe-print', Arial, Serif;
+    font-weight: normal; }
+  .typo__menus__menu4 ul > li > p:not(:first-child) {
+    font-weight: normal;
+    font-size: 1.3em; }
 
 .typo__footer {
-  font-family: 'PatriciaGothic-SemiBold';
+  font-family: 'PatriciaGothic-SemiBold', Arial, Serif;
   color: #FDCB46;
   margin: 0;
   padding: 0; }
 
 .typo__menuTitle {
-  font-family: 'MYingHei-PRCW48W7'; }
+  font-family: 'MYingHei-PRCW48W7', Arial, Serif; }
 
 .typo__soon {
-  font-size: 1.6em;
-  font-family: 'Stem-Regular';
+  font-size: 2em;
+  font-family: 'Stem-Regular', Arial, Serif;
   color: #FDCB46; }
 
 #main_wrapper main {
@@ -469,12 +536,12 @@ html, body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 50px;
-    width: 250px;
+    height: 65px;
+    width: 300px;
     border-radius: 10px;
     background-color: #579C87; }
     #main_wrapper .containerSoon .soon p {
-      margin: 0 0 0 27px;
+      margin: 0 0 0 25px;
       padding: 0; }
     #main_wrapper .containerSoon .soon p::after {
       display: inline-block;

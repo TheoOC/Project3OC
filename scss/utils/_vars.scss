@@ -8,8 +8,8 @@ $menuWidth:520px;
 $menuHeight:970px;
 $menuPadding:65px;
 $menuDesktop:(width:600px,height:1100px,padding:65px);
-$menuTablet:(width:520px,height:970px,padding:60px);
-$menuMobile:(width:400px,height:970px,padding:50px);
+$menuTablet:(width:520px,height:1100px,padding:60px);
+$menuMobile:(width:400px,height:1100px,padding:50px);
 
 $main-text-color:#FDCB46;
 
@@ -30,5 +30,7 @@ $menu-select-colors:(menu1:(color1:#3C1218)
 ,menu3:(sColor: #0431DF, eColor:#0887FB)
 ,menu4:(sColor: #3D9339, eColor:#BFFF7E)
 );
+
+$padding-titles:(t3:9px,t4:4px);
 
 
