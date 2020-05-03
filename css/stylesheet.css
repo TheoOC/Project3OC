@@ -1,44 +1,45 @@
 @font-face {
-  font-family: 'Devonshire-Regular';
+  font-family: "Devonshire-Regular";
   src: url("../fonts/Devonshire-Regular.ttf"); }
 
 @font-face {
-  font-family: 'segoe-print';
+  font-family: "segoe-print";
   src: url("../fonts/segoeprb.ttf"); }
 
 @font-face {
-  font-family: 'CroissantOne-Regular';
+  font-family: "CroissantOne-Regular";
   src: url("../fonts/CroissantOne-Regular.ttf"); }
 
 @font-face {
-  font-family: 'CasusPro-Bold';
+  font-family: "CasusPro-Bold";
   src: url("../fonts/CasusPro-Bold.ttf"); }
 
 @font-face {
-  font-family: 'CasusPro-Light';
+  font-family: "CasusPro-Light";
   src: url(../fonts/CasusPro-Light.ttf); }
 
 @font-face {
-  font-family: 'DancingScript-Regular';
+  font-family: "DancingScript-Regular";
   src: url("../fonts/DancingScript-Regular.ttf"); }
 
 @font-face {
-  font-family: 'KaushanScript-Regular';
+  font-family: "KaushanScript-Regular";
   src: url("../fonts/KaushanScript-Regular.ttf"); }
 
 @font-face {
-  font-family: 'PatriciaGothic-SemiBold';
+  font-family: "PatriciaGothic-SemiBold";
   src: url(../fonts/PatriciaGothic-SemiBold.otf); }
 
 @font-face {
-  font-family: 'MYingHei-PRCW48W7';
+  font-family: "MYingHei-PRCW48W7";
   src: url(../fonts/MYingHei-PRCW48W7.ttf); }
 
 @font-face {
-  font-family: 'Stem-Regular';
+  font-family: "Stem-Regular";
   src: url(../fonts/Stem-Regular.ttf); }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   border: 0;
@@ -46,6 +47,16 @@ html, body {
   font-size: 100%;
   vertical-align: baseline;
   background: transparent; }
+
+h1,
+h2,
+h3,
+ul,
+li,
+p {
+  margin: 0;
+  padding: 0;
+  border: 0; }
 
 @keyframes ellipsis-animation {
   to {
@@ -63,25 +74,30 @@ html, body {
   100% {
     transform: rotate(1deg); } }
 
-#main_wrapper, .menus_wrapper {
+#main_wrapper,
+.menus_wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: auto; }
-  #main_wrapper header, .menus_wrapper header {
-    background-color: #579C87;
+  #main_wrapper header,
+  .menus_wrapper header {
+    background-color: #579c87;
     display: flex;
     height: 100px;
     width: 100%; }
-    #main_wrapper header img, .menus_wrapper header img {
+    #main_wrapper header img,
+    .menus_wrapper header img {
       height: 50px;
       margin: auto; }
-    #main_wrapper header a, .menus_wrapper header a {
+    #main_wrapper header a,
+    .menus_wrapper header a {
       margin: auto; }
-  #main_wrapper footer, .menus_wrapper footer {
+  #main_wrapper footer,
+  .menus_wrapper footer {
     z-index: 10;
-    background-color: #579C87;
+    background-color: #579c87;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -92,14 +108,17 @@ html, body {
     bottom: 0;
     left: 0;
     width: 100%; }
-    #main_wrapper footer .ml, .menus_wrapper footer .ml {
+    #main_wrapper footer .ml,
+    .menus_wrapper footer .ml {
       position: relative; }
-      #main_wrapper footer .ml:hover, .menus_wrapper footer .ml:hover {
+      #main_wrapper footer .ml:hover,
+      .menus_wrapper footer .ml:hover {
         animation-name: wiggle-animation;
         animation-fill-mode: both;
         animation-duration: 300ms;
         animation-iteration-count: infinite; }
-      #main_wrapper footer .ml a, .menus_wrapper footer .ml a {
+      #main_wrapper footer .ml a,
+      .menus_wrapper footer .ml a {
         position: absolute;
         width: 100%;
         height: 100%;
@@ -107,7 +126,8 @@ html, body {
         left: 0;
         text-decoration: none;
         z-index: 15; }
-    #main_wrapper footer .contact:hover, .menus_wrapper footer .contact:hover {
+    #main_wrapper footer .contact:hover,
+    .menus_wrapper footer .contact:hover {
       animation-name: wiggle-animation;
       animation-fill-mode: both;
       animation-duration: 300ms;
@@ -166,12 +186,29 @@ html, body {
       margin-bottom: 90px;
       margin-right: 30px;
       margin-left: 30px; } }
-  .menus_wrapper .containerMenu > h2 {
-    margin: 100px 0 50px 0; }
   .menus_wrapper .containerMenu--menu-variant1 {
     justify-content: flex-end; }
     .menus_wrapper .containerMenu--menu-variant1 > h2 {
       margin: 10px 0 0px 0; }
+  .menus_wrapper .containerMenu--subheading {
+    margin: 40px 0px 10px 0px;
+    position: relative;
+    text-align: center; }
+    .menus_wrapper .containerMenu--subheading::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      border-bottom: 1px solid black;
+      transform: scale(0);
+      transition-duration: 300ms;
+      transition-timing-function: ease-out;
+      transition-property: transform;
+      transform-origin: bottom right; }
+    .menus_wrapper .containerMenu--subheading:hover::after {
+      transform: scale(1);
+      transform-origin: bottom left; }
   .menus_wrapper .containerMenu > img {
     padding-top: 60px;
     width: 60px;
@@ -198,76 +235,46 @@ html, body {
         .menus_wrapper .containerMenu article img {
           max-width: 28%;
           max-height: 28%; } }
-    .menus_wrapper .containerMenu article h3 {
-      margin: 40px 0px 10px 0px;
-      position: relative;
-      text-align: center; }
-      .menus_wrapper .containerMenu article h3::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        border-bottom: 1px solid black;
-        transform: scale(0);
-        transition-duration: 300ms;
-        transition-timing-function: ease-out;
-        transition-property: transform;
-        transform-origin: bottom right; }
-      .menus_wrapper .containerMenu article h3:hover::after {
-        transform: scale(1);
-        transform-origin: bottom left; }
-    .menus_wrapper .containerMenu article ul {
-      padding: 0;
-      margin: 0; }
-      .menus_wrapper .containerMenu article ul li {
+  .menus_wrapper .containerMenu ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0 10px 0;
+    min-height: 36px; }
+    @media screen and (max-width: 768px) {
+      .menus_wrapper .containerMenu ul li {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        margin: 5px 0 10px 0;
-        padding: 0;
-        min-height: 36px; }
-        @media screen and (max-width: 768px) {
-          .menus_wrapper .containerMenu article ul li {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            text-align: left; } }
-        @media screen and (max-width: 520px) {
-          .menus_wrapper .containerMenu article ul li {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            text-align: center; } }
-        .menus_wrapper .containerMenu article ul li p {
-          margin: 0;
-          padding: 0; }
-
+        text-align: left; } }
+    @media screen and (max-width: 520px) {
+      .menus_wrapper .containerMenu ul li {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center; } }
 .typo__select-menu {
   color: black;
   text-align: center;
   font-weight: normal; }
   .typo__select-menu--menu1 {
-    color: #3C1218; }
+    color: #3c1218; }
     .typo__select-menu--menu1 h3 {
       font-weight: lighter;
       margin: 3px;
-      padding: 0;
       font-size: 1.5em;
-      font-family: 'Devonshire-Regular', Arial, Serif; }
+      font-family: "Devonshire-Regular", Arial, Serif; }
     .typo__select-menu--menu1 h2 {
       font-size: 2em;
-      margin: 0;
-      padding: 0;
-      font-family: 'segoe-print', Arial, Serif;
+      font-family: "segoe-print", Arial, Serif;
       text-transform: uppercase; }
   .typo__select-menu--menu2 h3 {
     font-weight: lighter;
-    font-family: 'CroissantOne-Regular', Arial, Serif;
-    background-image: linear-gradient(45deg, #D8852E, #905BFD);
+    font-family: "CroissantOne-Regular", Arial, Serif;
+    background-image: linear-gradient(45deg, #d8852e, #905bfd);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -275,15 +282,13 @@ html, body {
     -moz-text-fill-color: transparent; }
   .typo__select-menu--menu2 h2 {
     font-size: 2em;
-    margin: 0;
-    padding: 0;
-    font-family: 'CasusPro-Bold', Arial, Serif;
-    color: #D8852E; }
+    font-family: "CasusPro-Bold", Arial, Serif;
+    color: #d8852e; }
   .typo__select-menu--menu3 h3 {
     font-size: 1.7em;
     font-weight: lighter;
-    font-family: 'DancingScript-Regular', Arial, Serif;
-    background-image: linear-gradient(45deg, #0431DF, #0887FB);
+    font-family: "DancingScript-Regular", Arial, Serif;
+    background-image: linear-gradient(45deg, #0431df, #0887fb);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -292,15 +297,13 @@ html, body {
     padding: 0 9px 0 9px; }
   .typo__select-menu--menu3 h2 {
     font-size: 2em;
-    margin: 0;
-    padding: 0;
-    font-family: 'segoe-print', Arial, Serif;
-    color: #0887FB; }
+    font-family: "segoe-print", Arial, Serif;
+    color: #0887fb; }
   .typo__select-menu--menu4 h3 {
-    font-size: 1.7em;
+    font-size: 1.8em;
     font-weight: lighter;
-    font-family: 'KaushanScript-Regular',Arial,Serif;
-    background-image: linear-gradient(45deg, #3D9339, #BFFF7E);
+    font-family: "KaushanScript-Regular", Arial, Serif;
+    background-image: linear-gradient(45deg, #3d9339, #bfff7e);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -309,113 +312,121 @@ html, body {
     padding: 0 4px 0 4px; }
   .typo__select-menu--menu4 h2 {
     font-size: 2em;
-    margin: 0;
-    padding: 0;
-    font-family: 'segoe-print', Arial, Serif;
-    color: #3D9339; }
+    font-family: "segoe-print", Arial, Serif;
+    color: #3d9339; }
 
 .typo__menus__menu1 {
-  font-family: 'segoe-print', Arial, Serif;
+  font-family: "segoe-print", Arial, Serif;
   font-weight: normal; }
   .typo__menus__menu1--title {
-    font-family: 'Devonshire-Regular', Arial, Serif;
+    font-family: "Devonshire-Regular", Arial, Serif;
     font-size: 2.5em;
     font-weight: lighter;
     text-align: center; }
   .typo__menus__menu1--subheading {
-    font-family: 'segoe-print', Arial, Serif;
+    font-family: "segoe-print", Arial, Serif;
     font-weight: bolder;
     font-size: 1.5em; }
+  .typo__menus__menu1--menu1EndTitle {
+    font-family: "Devonshire-Regular", Arial, Serif;
+    font-size: 2.5em;
+    font-weight: lighter;
+    text-align: center;
+    margin: 33px 0 33px 0; }
   .typo__menus__menu1 ul > li > p:not(:first-child) {
     font-weight: bolder;
     font-size: 1.3em; }
 
 .typo__menus__menu2 {
-  font-family: 'CasusPro-Light', Arial, Serif;
+  font-family: "CasusPro-Light", Arial, Serif;
   font-weight: lighter; }
   .typo__menus__menu2--title {
     font-weight: lighter;
-    font-family: 'CroissantOne-Regular', Arial, Serif;
-    background-image: linear-gradient(45deg, #D8852E, #905BFD);
+    font-family: "CroissantOne-Regular", Arial, Serif;
+    background-image: linear-gradient(45deg, #d8852e, #905bfd);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
-    font-size: 2.2em;
+    font-size: 2.3em;
     text-align: center; }
   .typo__menus__menu2--subheading {
-    font-family: 'CasusPro-Bold', Arial, Serif;
+    font-family: "CasusPro-Bold", Arial, Serif;
     font-weight: bolder;
     font-size: 1.1em; }
   .typo__menus__menu2 ul > li > p:not(:first-child) {
     font-weight: bolder;
-    font-size: 1.3em; }
+    font-size: 1.35em; }
   .typo__menus__menu2--color1 {
-    color: #C67412; }
+    color: #c67412; }
   .typo__menus__menu2--color2 {
-    color: #A56799; }
+    color: #a56799; }
   .typo__menus__menu2--color3 {
-    color: #6E4CCC; }
+    color: #6e4ccc; }
 
 .typo__menus__menu3 {
-  font-family: 'segoe-print', Arial, Serif;
-  font-weight: lighter; }
+  font-family: "segoe-print", Arial, Serif;
+  font-weight: bolder; }
   .typo__menus__menu3--title {
-    font-family: 'DancingScript-Regular', Arial, Serif;
-    background-image: linear-gradient(45deg, #0431DF, #0887FB);
+    font-family: "DancingScript-Regular", Arial, Serif;
+    background-image: linear-gradient(45deg, #0431df, #0887fb);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
-    font-size: 4em;
+    font-size: 4.2em;
     font-weight: lighter;
     padding: 0 9px 0 9px;
     text-align: center; }
   .typo__menus__menu3--subheading {
-    font-family: 'segoe-print', Arial, Serif;
-    font-weight: lighter; }
+    font-family: "segoe-print", Arial, Serif;
+    font-size: 1.2em; }
   .typo__menus__menu3 ul > li > p:not(:first-child) {
-    font-weight: normal;
     font-size: 1.3em; }
+  .typo__menus__menu3 ul li p {
+    font-size: 0.85em;
+    font-weight: bolder; }
 
 .typo__menus__menu4 {
-  font-family: 'segoe-print', Arial, Serif;
-  font-weight: normal;
-  font-size: 1em; }
+  font-family: "segoe-print", Arial, Serif;
+  font-weight: bolder; }
   .typo__menus__menu4--title {
-    font-family: 'segoe-print', Arial, Serif;
-    background-image: linear-gradient(45deg, #3D9339, #BFFF7E);
+    font-family: "KaushanScript-Regular", Arial, Serif;
+    background-image: linear-gradient(45deg, #3d9339, #bfff7e);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     font-weight: normal;
-    font-size: 3em;
+    font-size: 4.2em;
     padding: 0 4px 0 4px;
     text-align: center; }
   .typo__menus__menu4--subheading {
-    font-family: 'segoe-print', Arial, Serif;
-    font-weight: normal; }
+    font-family: "segoe-print", Arial, Serif;
+    font-size: 1.2em; }
   .typo__menus__menu4 ul > li > p:not(:first-child) {
     font-weight: normal;
     font-size: 1.3em; }
+  .typo__menus__menu4 ul li p {
+    font-size: 0.9em;
+    font-weight: bolder; }
 
 .typo__footer {
-  font-family: 'PatriciaGothic-SemiBold', Arial, Serif;
-  color: #FDCB46;
+  font-family: "PatriciaGothic-SemiBold", Arial, Serif;
+  color: #fdcb46;
   margin: 0;
   padding: 0; }
 
 .typo__menuTitle {
-  font-family: 'MYingHei-PRCW48W7', Arial, Serif; }
+  font-family: "MYingHei-PRCW48W7", Arial, Serif; }
 
 .typo__soon {
   font-size: 2em;
-  font-family: 'Stem-Regular', Arial, Serif;
-  color: #FDCB46; }
+  font-family: "Stem-Regular", Arial, Serif;
+  color: #fdcb46; }
 
 #main_wrapper main {
   display: flex;
@@ -460,9 +471,9 @@ html, body {
           opacity: 1; }
         #main_wrapper main .containerGrid__menu a:hover ~ * {
           transform: scale(1.13);
-          opacity: 0.70; }
+          opacity: 0.7; }
       #main_wrapper main .containerGrid__menu--note {
-        background-color: #FCDFDB;
+        background-color: #fcdfdb;
         width: 300px;
         height: 400px;
         margin: 30px; }
@@ -480,7 +491,7 @@ html, body {
             height: 266px;
             margin: 20px; } }
       #main_wrapper main .containerGrid__menu--chic {
-        background-color: #FFF5FE;
+        background-color: #fff5fe;
         width: 300px;
         height: 400px;
         margin: 30px; }
@@ -495,7 +506,7 @@ html, body {
             height: 266px;
             margin: 20px; } }
       #main_wrapper main .containerGrid__menu--delice {
-        background-color: #EDEFEF;
+        background-color: #edefef;
         width: 300px;
         height: 400px;
         margin: 30px; }
@@ -510,7 +521,7 @@ html, body {
             height: 266px;
             margin: 20px; } }
       #main_wrapper main .containerGrid__menu--palette {
-        background-color: #FDFFFD;
+        background-color: #fdfffd;
         width: 300px;
         height: 400px;
         margin: 30px; }
@@ -538,7 +549,7 @@ html, body {
     height: 65px;
     width: 300px;
     border-radius: 10px;
-    background-color: #579C87; }
+    background-color: #579c87; }
     #main_wrapper .containerSoon .soon p {
       margin: 0 0 0 25px;
       padding: 0; }
@@ -556,13 +567,31 @@ html, body {
       animation-iteration-count: infinite; }
 
 .containerMenu--bg1 {
-  background-color: #FCDFDB; }
+  background-color: #fcdfdb; }
 
 .containerMenu--bg2 {
-  background-color: #FFF5FE; }
+  background-color: #fff5fe; }
 
 .containerMenu--bg3 {
-  background-color: #EDEFEF; }
+  background-color: #edefef; }
 
 .containerMenu--bg4 {
-  background-color: #FDFFFD; }
+  background-color: #fdfffd; }
+
+.menuSpacing__variant2 h2 {
+  margin: 120px 0 40px 0; }
+
+.menuSpacing__variant2 li {
+  padding: 0 35px 0 35px; }
+
+.menuSpacing__variant3 h2 {
+  margin: 110px 0 40px 0; }
+
+.menuSpacing__variant3 li {
+  padding: 0 35px 0 35px; }
+
+.menuSpacing__variant4 h2 {
+  margin: 110px 0 40px 0; }
+
+.menuSpacing__variant4 li {
+  padding: 0 18px 0 18px; }

@@ -1,116 +1,106 @@
 //Block Elements Modifiers that we can reuse
 
-.menus_wrapper{
-    
-    & .menuTitle{
-        margin:auto;
-        & h1{
-            margin:50px 0 25px 0;
+.menus_wrapper {
+    & .menuTitle {
+        margin: auto;
+        & h1 {
+            margin: 50px 0 25px 0;
         }
-        
     }
-    & main{
-        width:100%;
+    & main {
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
 
-    & .ending{
-        width:100%;
-        margin:30px 0 30px 0;
-        display:flex;
-        flex-direction:row;
-        justify-content: center;
+        & .ending {
+            width: 100%;
+            margin: 30px 0 30px 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            & img {
+                width: 38px;
+                height: 38px;
+                margin-right: 5px;
+            }
+        }
+    }
+
+    .containerMenu {
+        @include containerMenuWidth;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        &--menu-variant1 {
+            justify-content: flex-end;
+            & > h2 {
+                margin: 10px 0 0px 0;
+            }
+        }
+
         align-items: center;
 
-       & img{
-            width:38px;
-            height:38px;
-            margin-right:5px;
-       }
+        box-shadow: 0 0 20px grey;
+        &--subheading {
+            margin: 40px 0px 10px 0px;
+            position: relative;
+            text-align: center;
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                border-bottom: 1px solid black;
+                transform: scale(0);
+                transition-duration: 300ms;
+                transition-timing-function: ease-out;
+                transition-property: transform;
+                transform-origin: bottom right;
+            }
+            &:hover::after {
+                transform: scale(1);
+                transform-origin: bottom left;
+            }
+        }
+
+        & > img {
+            padding-top: 60px;
+            width: 60px;
+            height: 60px;
+            margin: 0;
+        }
+
+        & article {
+            width: 100%;
+            & .articleTitle {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            & img {
+                margin: 40px 0px 10px 0px;
+                display: inline-block;
+                vertical-align: middle;
+                @include articleImagesSizes;
+            }
+        }
+
+        //default ul and li, variants in _menus_variants
+        & ul {  
+            & li {
+                //li medias
+                @include articleLi;
+                margin: 5px 0 10px 0;
+                min-height: 36px;
+                
+            }
+        }
     }
 }
-
-
-.containerMenu{
-    @include containerMenuWidth;
-     display:flex;
-     flex-direction:column;
-     justify-content: flex-start;
-     & > h2{
-        margin: 100px 0 50px 0;
-    }
-     &--menu-variant1{
-        justify-content: flex-end;
-        & > h2{
-            margin: 10px 0 0px 0;
-        }
-     }
-       
-     align-items: center;
-     
-     box-shadow: 0 0 20px grey;
-         & > img{
-             padding-top:60px;
-             width:60px;
-             height:60px;
-             margin:0;
-         }
-         
-         & article{
-             width:100%;
-             & .articleTitle{
-                 
-                 display:flex;
-                 flex-direction:row;
-                 justify-content: space-between;
-                 align-items: center;
-             }
-             & img{
-                 margin:40px 0px 10px 0px;
-                 display:inline-block;
-                 vertical-align: middle;
-                 @include articleImagesSizes;
-             }
-             & h3{
-                 margin:40px 0px 10px 0px;
-                 position:relative;
-                 text-align:center;
-                 &::after{
-                     content:'';
-                     position:absolute;
-                     bottom:0;
-                     left:0;
-                     width:100%;
-                     border-bottom:1px solid black;
-                     transform:scale(0);
-                     transition-duration:300ms;
-                     transition-timing-function: ease-out;
-                     transition-property: transform;
-                     transform-origin: bottom right;
-                 }
-                 &:hover::after{
-                     transform:scale(1);
-                     transform-origin: bottom left;
-                 }
-                
-             }
-             & ul{
-                 @include articleUl;
-                 padding: 0;
-                 margin: 0;
-                & li{
-                    @include articleLi;
-                    margin:5px 0 10px 0;
-                    padding:0;
-                    min-height:36px;
-                & p{
-                    margin:0;
-                    padding:0;
-                }
-                    
-                 }
-             }
-         }
-     }
- }

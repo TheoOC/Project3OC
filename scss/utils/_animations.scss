@@ -1,26 +1,24 @@
-
-@keyframes ellipsis-animation{
-    to{
-        width:1.2em;
+@keyframes ellipsis-animation {
+    to {
+        width: 1.2em;
     }
-
 }
 
-@keyframes wiggle-animation{
-    0%{
-        transform:rotate(0deg);
+@keyframes wiggle-animation {
+    0% {
+        transform: rotate(0deg);
     }
-   
-    30%{
-        transform:rotate(-2deg);
+
+    30% {
+        transform: rotate(-2deg);
     }
-    60%{
-        transform:rotate(0deg);
+    60% {
+        transform: rotate(0deg);
     }
-    90%{
-        transform:rotate(2deg);
+    90% {
+        transform: rotate(2deg);
     }
-    100%{
-        transform:rotate(1deg);
+    100% {
+        transform: rotate(1deg);
     }
 }

@@ -1,146 +1,135 @@
-
-@mixin tabletOnly{
-    @media screen and (max-width: map-get($breakpoints, tablet )){
+@mixin tabletOnly {
+    @media screen and (max-width: map-get($breakpoints, tablet )) {
         @content;
-        }
-}
-    
-@mixin mobileOnly{
-        @media screen and (max-width: map-get($breakpoints, mobile )){
-            @content;
-        }
-}
-    
-@mixin articleLi{
-        display:flex;
-        flex-direction:row;
-        justify-content: space-between;
-        align-items: center;
-        
-        @include tabletOnly{
-        display:flex;
-        flex-direction:row;
-        justify-content: space-between;
-        align-items: center;
-        text-align:left;
-        }
-        @include mobileOnly{
-            display:flex;
-            flex-direction:column;
-            justify-content: space-between;
-            align-items: center;
-            text-align:center;
-        }
-}
-@mixin articleUl{
-        @include tabletOnly{
-        }
-        @include mobileOnly{
-        }
-}
-    
-@mixin articleImagesSizes{
-        max-width:30%;
-        max-height:30%;
-        @include tabletOnly{
-            max-width:29%;
-            max-height:29%;
-        }
-        @include mobileOnly{
-            max-width:28%;
-            max-height:28%;
-        }
-}
-    
-@mixin containerMenuWidth{
-    
-        max-width:map-get($menuDesktop,width);
-        min-height:map-get($menuDesktop,height);
-        padding:0 map-get($menuDesktop,padding) 0 map-get($menuDesktop,padding);
-        margin-top:0;
-        margin-bottom: map-get( $heights ,footer ) + 15px;
-        margin-right:30px;
-        margin-left:30px;
-        @include tabletOnly{
-            max-width:map-get($menuTablet,width);
-            min-height:map-get($menuTablet,height);
-            padding:0 map-get($menuTablet,padding) 0 map-get($menuTablet,padding);
-            margin-top:0;
-            margin-bottom:map-get( $heights ,footer ) + 15px ;
-            margin-right:30px;
-            margin-left:30px;
-          
-        }
-    
-        @include mobileOnly{
-            max-width:map-get($menuMobile,width);
-            min-height:map-get($menuMobile,height);
-            padding:0 map-get($menuMobile,padding) 0 map-get($menuMobile,padding);
-            margin-top:0;
-            margin-bottom:map-get( $heights ,footer ) + 15px ;
-            margin-right:30px;
-            margin-left:30px;
-        
-        }
-}
-    
-@mixin containerGridWidth{
-        //2 col so *2
-        width:(map-get($menuSelectDesktop,width)*2) + (map-get($menuSelectDesktop, margin )*5);
-        @include tabletOnly{
-        width:(map-get($menuSelectTablet,width)*2 )+ (map-get($menuSelectTablet, margin )*5);
-        }
-        @include mobileOnly{
-        width:(map-get($menuSelectMobile,width)*1) + (map-get($menuSelectMobile, margin )*2);
-        }
-}
-    
-@mixin menuBlock{
-    
-        width:map-get($menuSelectDesktop,width);
-        height:map-get($menuSelectDesktop,height);
-        margin:map-get($menuSelectDesktop,margin);
-    
-    
-    @include tabletOnly{
-        width:map-get($menuSelectTablet,width);
-        height:map-get($menuSelectTablet,height);
-        margin:map-get($menuSelectTablet,margin);
-    }
-    
-    @include mobileOnly{
-        width:map-get($menuSelectMobile,width);
-        height:map-get($menuSelectMobile,height);
-        margin:map-get($menuSelectMobile,margin);
     }
 }
 
-@mixin ellipsis-animation{
-    display:inline-block;
-    content:"\2026";
-    margin:0;
-    padding:0;
-    overflow:hidden;
+@mixin mobileOnly {
+    @media screen and (max-width: map-get($breakpoints, mobile )) {
+        @content;
+    }
+}
+
+@mixin articleLi {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    @include tabletOnly {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+    @include mobileOnly {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+
+@mixin articleImagesSizes {
+    max-width: 30%;
+    max-height: 30%;
+    @include tabletOnly {
+        max-width: 29%;
+        max-height: 29%;
+    }
+    @include mobileOnly {
+        max-width: 28%;
+        max-height: 28%;
+    }
+}
+
+@mixin containerMenuWidth {
+    max-width: map-get($menuDesktop, width);
+    min-height: map-get($menuDesktop, height);
+    padding: 0 map-get($menuDesktop, padding) 0 map-get($menuDesktop, padding);
+    margin-top: 0;
+    margin-bottom: map-get($heights, footer) + 15px;
+    margin-right: 30px;
+    margin-left: 30px;
+    @include tabletOnly {
+        max-width: map-get($menuTablet, width);
+        min-height: map-get($menuTablet, height);
+        padding: 0 map-get($menuTablet, padding) 0 map-get($menuTablet, padding);
+        margin-top: 0;
+        margin-bottom: map-get($heights, footer) + 15px;
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+
+    @include mobileOnly {
+        max-width: map-get($menuMobile, width);
+        min-height: map-get($menuMobile, height);
+        padding: 0 map-get($menuMobile, padding) 0 map-get($menuMobile, padding);
+        margin-top: 0;
+        margin-bottom: map-get($heights, footer) + 15px;
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+}
+
+@mixin containerGridWidth {
+    //2 col so *2
+    width: (map-get($menuSelectDesktop, width) * 2) + (map-get($menuSelectDesktop, margin) * 5);
+    @include tabletOnly {
+        width: (map-get($menuSelectTablet, width) * 2)+ (map-get($menuSelectTablet, margin) * 5);
+    }
+    @include mobileOnly {
+        width: (map-get($menuSelectMobile, width) * 1) + (map-get($menuSelectMobile, margin) * 2);
+    }
+}
+
+@mixin menuBlock {
+    width: map-get($menuSelectDesktop, width);
+    height: map-get($menuSelectDesktop, height);
+    margin: map-get($menuSelectDesktop, margin);
+
+    @include tabletOnly {
+        width: map-get($menuSelectTablet, width);
+        height: map-get($menuSelectTablet, height);
+        margin: map-get($menuSelectTablet, margin);
+    }
+
+    @include mobileOnly {
+        width: map-get($menuSelectMobile, width);
+        height: map-get($menuSelectMobile, height);
+        margin: map-get($menuSelectMobile, margin);
+    }
+}
+
+@mixin ellipsis-animation {
+    display: inline-block;
+    content: "\2026";
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
     vertical-align: bottom;
-    width:0px;
-    
-    animation-name:ellipsis-animation;
-    animation-duration:2000ms;
-    animation-timing-function: steps(4,end);
+    width: 0px;
+
+    animation-name: ellipsis-animation;
+    animation-duration: 2000ms;
+    animation-timing-function: steps(4, end);
     animation-iteration-count: infinite;
 }
-@mixin wiggle-animation{
-    animation-name:wiggle-animation;
+@mixin wiggle-animation {
+    animation-name: wiggle-animation;
     animation-fill-mode: both;
-    animation-duration:300ms;
+    animation-duration: 300ms;
     animation-iteration-count: infinite;
 }
 
-@mixin text-gradient($direction:to right,$first-color:#000000,$second-color:#000000){
-    background-image: linear-gradient($direction,$first-color,$second-color);
-    background-size:100%;
+@mixin text-gradient($direction: to right, $first-color: #000000, $second-color: #000000) {
+    background-image: linear-gradient($direction, $first-color, $second-color);
+    background-size: 100%;
     -webkit-background-clip: text;
-    -moz-background-clip:text;
+    -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -moz-text-fill-color:transparent;
+    -moz-text-fill-color: transparent;
 }

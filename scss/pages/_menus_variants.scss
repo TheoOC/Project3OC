@@ -1,14 +1,43 @@
-.containerMenu{
-    &--bg1{
-        background-color: map-get($menu-bg-colors, menu1 );
-     }
-    &--bg2{
-        background-color: map-get($menu-bg-colors, menu2 );
+.containerMenu {
+    &--bg1 {
+        background-color: map-get($menu-bg-colors, menu1);
     }
-    &--bg3{
-        background-color: map-get($menu-bg-colors, menu3 );
+    &--bg2 {
+        background-color: map-get($menu-bg-colors, menu2);
     }
-    &--bg4{
-        background-color: map-get($menu-bg-colors, menu4 );
+    &--bg3 {
+        background-color: map-get($menu-bg-colors, menu3);
+    }
+    &--bg4 {
+        background-color: map-get($menu-bg-colors, menu4);
+    }
+}
+
+.menuSpacing {
+    &__variant2 {
+        & h2 {
+            margin:120px 0 40px 0;
+        }
+       & li{
+           padding: 0 35px 0 35px;
+       }
+    }
+    &__variant3 {
+        & h2 {
+            margin:110px 0 40px 0;
+        }
+        & li{
+            padding: 0 35px 0 35px;
+        }
+       
+    }
+    &__variant4 {
+        & h2 {
+            margin:110px 0 40px 0;
+        }
+        & li{
+            padding: 0 18px 0 18px;
+        }
+       
     }
 }

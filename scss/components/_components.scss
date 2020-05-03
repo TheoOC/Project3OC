@@ -1,6 +1,7 @@
 //Blocks Elements Modifiers non reutilisables
 
-html,body {
+html,
+body {
     margin: 0;
     padding: 0;
     border: 0;
@@ -8,4 +9,15 @@ html,body {
     font-size: 100%;
     vertical-align: baseline;
     background: transparent;
+}
+
+h1,
+h2,
+h3,
+ul,
+li,
+p{
+    margin: 0;
+    padding: 0;
+    border: 0;
 }

@@ -1,20 +1,19 @@
 //base
-@import 'base/_fonts.scss';
+@import "base/_fonts.scss";
 
 //components
-@import 'components/_components.scss';
+@import "components/_components.scss";
 
 //utils
-@import 'utils/_vars.scss';
-@import 'utils/_mixins.scss';
-@import 'utils/animations';
+@import "utils/_vars.scss";
+@import "utils/_mixins.scss";
+@import "utils/animations";
 
 //layouts
-@import 'layouts/_header_footer.scss';
-@import 'layouts/_menus.scss';
-@import 'layouts/_typo.scss';
+@import "layouts/_header_footer.scss";
+@import "layouts/_menus.scss";
+@import "layouts/_typo.scss";
 
 //pages
-@import 'pages/_main_menu.scss';
-@import 'pages/_menus_variants.scss';
-
+@import "pages/_main_menu.scss";
+@import "pages/_menus_variants.scss";

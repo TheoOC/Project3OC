@@ -1,36 +1,84 @@
 //variables mixins %placeholders
 
-$menuSelectDesktop:(width:300px,height:400px,margin:30px);
-$menuSelectTablet:(width:250px,height:333px,margin:25px);
-$menuSelectMobile:(width:200px,height:266px,margin:20px);
-
-$menuWidth:520px;
-$menuHeight:970px;
-$menuPadding:65px;
-$menuDesktop:(width:600px,height:1100px,padding:65px);
-$menuTablet:(width:520px,height:1100px,padding:60px);
-$menuMobile:(width:400px,height:1100px,padding:50px);
-
-$main-text-color:#FDCB46;
-
-$extremity-colors:(
-    header:#579C87,
-    soon:#579C87,
-    footer:#579C87,
+$menuSelectDesktop: (
+    width: 300px,
+    height: 400px,
+    margin: 30px,
+);
+$menuSelectTablet: (
+    width: 250px,
+    height: 333px,
+    margin: 25px,
+);
+$menuSelectMobile: (
+    width: 200px,
+    height: 266px,
+    margin: 20px,
 );
 
-$menu-bg-colors:(menu1:#FCDFDB,menu2:#FFF5FE,menu3:#EDEFEF,menu4:#FDFFFD);
-
-$heights:( header:100px,footer:75px);
-
-$breakpoints:(tablet:768px,mobile:520px);
-
-$menu-select-colors:(menu1:(color1:#3C1218)
-,menu2:(sColor: #D8852E, eColor:#905BFD)
-,menu3:(sColor: #0431DF, eColor:#0887FB)
-,menu4:(sColor: #3D9339, eColor:#BFFF7E)
+$menuWidth: 520px;
+$menuHeight: 970px;
+$menuPadding: 65px;
+$menuDesktop: (
+    width: 600px,
+    height: 1100px,
+    padding: 65px,
+);
+$menuTablet: (
+    width: 520px,
+    height: 1100px,
+    padding: 60px,
+);
+$menuMobile: (
+    width: 400px,
+    height: 1100px,
+    padding: 50px,
 );
 
-$padding-titles:(t3:9px,t4:4px);
+$main-text-color: #fdcb46;
 
+$extremity-colors: (
+    header: #579c87,
+    soon: #579c87,
+    footer: #579c87,
+);
 
+$menu-bg-colors: (
+    menu1: #fcdfdb,
+    menu2: #fff5fe,
+    menu3: #edefef,
+    menu4: #fdfffd,
+);
+
+$heights: (
+    header: 100px,
+    footer: 75px,
+);
+
+$breakpoints: (
+    tablet: 768px,
+    mobile: 520px,
+);
+
+$menu-select-colors: (
+    menu1: (
+        color1: #3c1218,
+    ),
+    menu2: (
+        sColor: #d8852e,
+        eColor: #905bfd,
+    ),
+    menu3: (
+        sColor: #0431df,
+        eColor: #0887fb,
+    ),
+    menu4: (
+        sColor: #3d9339,
+        eColor: #bfff7e,
+    ),
+);
+
+$padding-titles: (
+    t3: 9px,
+    t4: 4px,
+);

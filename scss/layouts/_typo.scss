@@ -1,199 +1,211 @@
+.typo {
+    &__select-menu {
+        color: black;
+        text-align: center;
+        font-weight: normal;
+        &--menu1 {
+            color: map-get(map-get($menu-select-colors, menu1), color1);
+            & h3 {
+                font-weight: lighter;
+                margin: 3px;
+                font-size: 1.5em;
+                font-family: "Devonshire-Regular", Arial, Serif;
+            }
+            & h2 {
+                font-size: 2em;
+                font-family: "segoe-print", Arial, Serif;
+                text-transform: uppercase;
+            }
+        }
+        &--menu2 {
+            & h3 {
+                font-weight: lighter;
+                font-family: "CroissantOne-Regular", Arial, Serif;
+                @include text-gradient(
+                    45deg,
+                    map-get(map-get($menu-select-colors, menu2), sColor),
+                    map-get(map-get($menu-select-colors, menu2), eColor)
+                );
+            }
+            & h2 {
+                font-size: 2em;
+                font-family: "CasusPro-Bold", Arial, Serif;
+                color: map-get(map-get($menu-select-colors, menu2), sColor);
+            }
+        }
+        &--menu3 {
+            & h3 {
+                font-size: 1.7em;
+                font-weight: lighter;
+                font-family: "DancingScript-Regular", Arial, Serif;
+                @include text-gradient(
+                    45deg,
+                    map-get(map-get($menu-select-colors, menu3), sColor),
+                    map-get(map-get($menu-select-colors, menu3), eColor)
+                );
+                padding: 0 map-get($padding-titles, t3) 0 map-get($padding-titles, t3);
+            }
+            & h2 {
+                font-size: 2em;
+                font-family: "segoe-print", Arial, Serif;
+                color: map-get(map-get($menu-select-colors, menu3), eColor);
+            }
+        }
+        &--menu4 {
+            & h3 {
+                font-size: 1.8em;
+                font-weight: lighter;
+                font-family: "KaushanScript-Regular", Arial, Serif;
+                @include text-gradient(
+                    45deg,
+                    map-get(map-get($menu-select-colors, menu4), sColor),
+                    map-get(map-get($menu-select-colors, menu4), eColor)
+                );
+                padding: 0 map-get($padding-titles, t4) 0 map-get($padding-titles, t4);
+            }
+            & h2 {
+                font-size: 2em;
+                font-family: "segoe-print", Arial, Serif;
+                color: map-get(map-get($menu-select-colors, menu4), sColor);
+            }
+        }
+    }
 
-.typo{
+    &__menus {
+        &__menu1 {
+            font-family: "segoe-print", Arial, Serif;
+            font-weight: normal;
 
-    &__select-menu{
-    color:black;
-    text-align: center;
-    font-weight: normal;
-        &--menu1{
-            color:map-get(map-get($menu-select-colors,menu1),color1);
-           & h3{
+            &--title {
+                font-family: "Devonshire-Regular", Arial, Serif;
+                font-size: 2.5em;
+                font-weight: lighter;
+                text-align: center;
+            }
+            &--subheading {
+                font-family: "segoe-print", Arial, Serif;
+                font-weight: bolder;
+                font-size: 1.5em;
+            }
+            &--menu1EndTitle {
+                font-family: "Devonshire-Regular", Arial, Serif;
+                font-size: 2.5em;
+                font-weight: lighter;
+                text-align: center;
+                margin: 33px 0 33px 0;
+            }
+            //price
+            & ul > li > p:not(:first-child) {
+                font-weight: bolder;
+                font-size: 1.3em;
+            }
+        }
+
+        &__menu2 {
+            font-family: "CasusPro-Light", Arial, Serif;
             font-weight: lighter;
-            margin:3px;
-            padding:0;
-            font-size:1.5em;
-            font-family: 'Devonshire-Regular', Arial, Serif;
-            
-           }
-           & h2{
-            font-size: 2em;
-            margin:0;
-            padding:0;
-            font-family:'segoe-print', Arial, Serif;
-            text-transform: uppercase;
-           }
-        }
-        &--menu2{
-            & h3{
-                font-weight: lighter;
-                font-family: 'CroissantOne-Regular', Arial, Serif;
-                @include text-gradient(45deg,map-get(map-get($menu-select-colors,menu2),sColor),map-get(map-get($menu-select-colors,menu2),eColor));
-                
-            }
-            & h2{
-                font-size: 2em;
-                margin:0;
-                padding:0;
-                font-family: 'CasusPro-Bold', Arial, Serif;
-                color:map-get(map-get($menu-select-colors,menu2),sColor);
-                
-            }
-        }
-        &--menu3{
-            & h3{
-                font-size: 1.7em;
-                font-weight: lighter;
-                font-family:'DancingScript-Regular', Arial, Serif;
-                @include text-gradient(45deg,map-get(map-get($menu-select-colors,menu3),sColor),map-get(map-get($menu-select-colors,menu3),eColor));
-                padding:0 map-get($padding-titles, t3) 0 map-get($padding-titles, t3);
-            }
-            & h2{
-                font-size: 2em;
-                margin:0;
-                padding:0;
-                font-family:'segoe-print', Arial, Serif;
-                color:map-get(map-get($menu-select-colors,menu3),eColor);
-                
-            }
-        }
-        &--menu4{
-            & h3{
-                font-size: 1.7em;
-                font-weight: lighter;
-                font-family:'KaushanScript-Regular',Arial,Serif;
-                @include text-gradient(45deg,map-get(map-get($menu-select-colors,menu4),sColor),map-get(map-get($menu-select-colors,menu4),eColor));
-                padding:0 map-get($padding-titles, t4) 0 map-get($padding-titles, t4);
-            }
-            & h2{
-                font-size: 2em;
-                margin:0;
-                padding:0;
-                font-family:'segoe-print', Arial, Serif;
-                color:map-get(map-get($menu-select-colors,menu4),sColor);
-                
-            }
-        }
-    }
 
-    &__menus{
-        &__menu1{
-            font-family:'segoe-print', Arial, Serif;
-            font-weight:normal;
-            
-            &--title{
-                font-family:'Devonshire-Regular', Arial, Serif;
-                font-size:2.5em;
+            &--title {
                 font-weight: lighter;
+                font-family: "CroissantOne-Regular", Arial, Serif;
+                @include text-gradient(
+                    45deg,
+                    map-get(map-get($menu-select-colors, menu2), sColor),
+                    map-get(map-get($menu-select-colors, menu2), eColor)
+                );
+                font-size: 2.3em;
                 text-align: center;
             }
-            &--subheading{
-                font-family:'segoe-print', Arial, Serif;
+            &--subheading {
+                font-family: "CasusPro-Bold", Arial, Serif;
                 font-weight: bolder;
-                font-size:1.5em;
+                font-size: 1.1em;
             }
-            & ul > li > p:not(:first-child){
+            & ul > li > p:not(:first-child) {
                 font-weight: bolder;
-                font-size:1.3em;
+                font-size: 1.35em;
+            }
+            &--color1 {
+                color: #c67412;
+            }
+            &--color2 {
+                color: #a56799;
+            }
+            &--color3 {
+                color: #6e4ccc;
+            }
+        }
+        &__menu3 {
+            font-family: "segoe-print", Arial, Serif;
+            font-weight: bolder;
+            &--title {
+                font-family: "DancingScript-Regular", Arial, Serif;
+                @include text-gradient(
+                    45deg,
+                    map-get(map-get($menu-select-colors, menu3), sColor),
+                    map-get(map-get($menu-select-colors, menu3), eColor)
+                );
+                font-size: 4.2em;
+                font-weight: lighter;
+                padding: 0 map-get($padding-titles, t3) 0 map-get($padding-titles, t3);
+                text-align: center;
+            }
+            &--subheading {
+                font-family: "segoe-print", Arial, Serif;
+                font-size:1.2em;
+            }
+            & ul > li > p:not(:first-child) {
+                font-size: 1.3em;
+            }
+            & ul li p{
+                font-size:0.85em;
+                font-weight: bolder;
             }
            
         }
-
-        &__menu2{
-            font-family: 'CasusPro-Light', Arial, Serif;
-            font-weight:lighter;
-
-            &--title{
-                font-weight: lighter;
-                font-family: 'CroissantOne-Regular', Arial, Serif;
-                @include text-gradient(45deg,map-get(map-get($menu-select-colors,menu2),sColor),map-get(map-get($menu-select-colors,menu2),eColor));
-                font-size:2.2em;
+        &__menu4 {
+            font-family: "segoe-print", Arial, Serif;
+            font-weight: bolder;
+            &--title {
+                font-family: "KaushanScript-Regular", Arial, Serif;
+                @include text-gradient(
+                    45deg,
+                    map-get(map-get($menu-select-colors, menu4), sColor),
+                    map-get(map-get($menu-select-colors, menu4), eColor)
+                );
+                font-weight: normal;
+                font-size: 4.2em;
+                padding: 0 map-get($padding-titles, t4) 0 map-get($padding-titles, t4);
                 text-align: center;
             }
-            &--subheading{
-            font-family: 'CasusPro-Bold', Arial, Serif;
-            font-weight:bolder;
-            font-size:1.1em;
+            &--subheading {
+                font-family: "segoe-print", Arial, Serif;
+                font-size:1.2em;
             }
-            & ul > li > p:not(:first-child){
+            & ul > li > p:not(:first-child) {
+                font-weight: normal;
+                font-size: 1.3em;
+            }
+            & ul li p{
+                font-size:0.9em;
                 font-weight: bolder;
-                font-size:1.3em;
             }
-            &--color1{
-                color:#C67412;
-            }
-            &--color2{
-                color:#A56799;
-            }
-            &--color3{
-                color:#6E4CCC;
-            }
-
-        }
-        &__menu3{
-            font-family:'segoe-print', Arial, Serif;
-            font-weight:lighter;
-            &--title{
-                font-family:'DancingScript-Regular', Arial, Serif;
-                @include text-gradient(45deg,map-get(map-get($menu-select-colors,menu3),sColor),map-get(map-get($menu-select-colors,menu3),eColor));
-                font-size:4em;
-                font-weight: lighter;
-                padding:0 map-get($padding-titles, t3) 0 map-get($padding-titles, t3);
-                text-align: center;
-                
-            }
-            &--subheading{
-                
-                font-family:'segoe-print', Arial, Serif;
-                font-weight:lighter;
-                
-            }
-            & ul > li > p:not(:first-child){
-                font-weight: normal;
-                font-size:1.3em;
-                
-            }
-           
-        }
-        &__menu4{
-            font-family:'segoe-print', Arial, Serif;
-            font-weight:normal;
-            font-size:1em;
-            &--title{
-                font-family:'segoe-print', Arial, Serif;
-                @include text-gradient(45deg,map-get(map-get($menu-select-colors,menu4),sColor),map-get(map-get($menu-select-colors,menu4),eColor));
-                font-weight: normal;
-                font-size: 3em;
-                padding:0 map-get($padding-titles, t4) 0 map-get($padding-titles, t4);
-                text-align: center;
-            
-            }
-            &--subheading{
-                font-family:'segoe-print', Arial, Serif;
-                font-weight: normal;
-            }
-            & ul > li > p:not(:first-child){
-                font-weight: normal;
-                font-size:1.3em;
-                
-            }
-
         }
     }
-   
 
-    &__footer{
-        font-family: 'PatriciaGothic-SemiBold', Arial, Serif;
-        color:$main-text-color;
-        margin:0;
-        padding:0;
+    &__footer {
+        font-family: "PatriciaGothic-SemiBold", Arial, Serif;
+        color: $main-text-color;
+        margin: 0;
+        padding: 0;
     }
-    &__menuTitle{
-        font-family:'MYingHei-PRCW48W7', Arial, Serif;
+    &__menuTitle {
+        font-family: "MYingHei-PRCW48W7", Arial, Serif;
     }
-    &__soon{
+
+    &__soon {
         font-size: 2em;
-        font-family:'Stem-Regular', Arial, Serif;
+        font-family: "Stem-Regular", Arial, Serif;
         color: $main-text-color;
     }
-    
 }
