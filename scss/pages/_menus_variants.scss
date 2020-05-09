@@ -1,3 +1,4 @@
+//variants for different bg color of each menu
 .containerMenu {
     &--bg1 {
         background-color: map-get($menu-bg-colors, menu1);
@@ -13,31 +14,30 @@
     }
 }
 
+//different spacing for different menus
 .menuSpacing {
     &__variant2 {
         & h2 {
-            margin:120px 0 40px 0;
+            margin: 120px 0 40px 0;
         }
-       & li{
-           padding: 0 35px 0 35px;
-       }
+        & li {
+            padding: 0 35px 0 35px;
+        }
     }
     &__variant3 {
         & h2 {
-            margin:110px 0 40px 0;
+            margin: 110px 0 40px 0;
         }
-        & li{
+        & li {
             padding: 0 35px 0 35px;
         }
-       
     }
     &__variant4 {
         & h2 {
-            margin:110px 0 40px 0;
+            margin: 110px 0 40px 0;
         }
-        & li{
+        & li {
             padding: 0 18px 0 18px;
         }
-       
     }
 }

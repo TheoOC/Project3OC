@@ -1,4 +1,5 @@
 #main_wrapper {
+    //main contain the grid
     & main {
         display: flex;
         justify-content: center;
@@ -6,32 +7,38 @@
         width: 100%;
         height: auto;
         margin: auto;
+        //the grid containing each menu to chose from
         .containerGrid {
+            //breakpoints for the grid , desktop,tablet and phone
             @include containerGridWidth;
             height: auto;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
+
             &__menu {
                 display: flex;
-
+                //need to make position explicit for the link to be relative to this menu
                 position: relative;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                box-shadow: 0 0 20px#9E9E9E;
+                box-shadow: 0 0 20px $shadow-color;
 
                 & a {
+                    //using absolute position so the link has a position relative to the menu
                     position: absolute;
+                    //making it take all the size of the menu
                     width: 100%;
                     height: 100%;
                     top: 0;
                     left: 0;
                     text-decoration: none;
+                    //make it on top of the menu
                     z-index: 5;
 
-                    //anim
+                    //zooming transition when the mouse is on the link
                     & ~ * {
                         transition-duration: 200ms;
                         transition-timing-function: ease-out;
@@ -45,12 +52,15 @@
                     }
                 }
 
+                //all 4 different menu to choose from
                 &--note {
                     & img {
                         width: 45px;
                         height: 45px;
                     }
                     background-color: map-get($menu-bg-colors, menu1);
+
+                    //responsive for the width, height and margin of the menu
                     @include menuBlock;
                 }
 
@@ -70,18 +80,20 @@
         }
     }
 
+    //container showing "Prochainement" with ellispis animation
     .containerSoon {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
         min-height: 15%;
+        //margin bottom so it doesn t go under the footer -> the footer height plus some extra space
         margin-bottom: map-get($heights, footer) + 15px;
+
         .soon {
             display: flex;
             flex-direction: row;
             align-items: center;
-
             height: 65px;
             width: 300px;
             border-radius: 10px;

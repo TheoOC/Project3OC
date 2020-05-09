@@ -1,4 +1,5 @@
 .typo {
+    //typography for the selection menu
     &__select-menu {
         color: black;
         text-align: center;
@@ -71,6 +72,7 @@
         }
     }
 
+    //typography for each menus
     &__menus {
         &__menu1 {
             font-family: "segoe-print", Arial, Serif;
@@ -100,7 +102,6 @@
                 font-size: 1.3em;
             }
         }
-
         &__menu2 {
             font-family: "CasusPro-Light", Arial, Serif;
             font-weight: lighter;
@@ -152,16 +153,15 @@
             }
             &--subheading {
                 font-family: "segoe-print", Arial, Serif;
-                font-size:1.2em;
+                font-size: 1.2em;
             }
             & ul > li > p:not(:first-child) {
                 font-size: 1.3em;
             }
-            & ul li p{
-                font-size:0.85em;
+            & ul li p {
+                font-size: 0.85em;
                 font-weight: bolder;
             }
-           
         }
         &__menu4 {
             font-family: "segoe-print", Arial, Serif;
@@ -180,14 +180,14 @@
             }
             &--subheading {
                 font-family: "segoe-print", Arial, Serif;
-                font-size:1.2em;
+                font-size: 1.2em;
             }
             & ul > li > p:not(:first-child) {
                 font-weight: normal;
                 font-size: 1.3em;
             }
-            & ul li p{
-                font-size:0.9em;
+            & ul li p {
+                font-size: 0.9em;
                 font-weight: bolder;
             }
         }
@@ -198,11 +198,15 @@
         color: $main-text-color;
         margin: 0;
         padding: 0;
+        & a{
+            //overwrite href style
+            text-decoration: none;
+            color: $main-text-color;
+        }
     }
     &__menuTitle {
         font-family: "MYingHei-PRCW48W7", Arial, Serif;
     }
-
     &__soon {
         font-size: 2em;
         font-family: "Stem-Regular", Arial, Serif;

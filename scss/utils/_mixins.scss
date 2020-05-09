@@ -1,20 +1,21 @@
 @mixin tabletOnly {
     @media screen and (max-width: map-get($breakpoints, tablet )) {
+        //use content directive so when compiling all the content of the mixin get replaced by the code written
         @content;
     }
 }
-
 @mixin mobileOnly {
     @media screen and (max-width: map-get($breakpoints, mobile )) {
         @content;
     }
 }
-
+//li responsive
 @mixin articleLi {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    text-align: left;
 
     @include tabletOnly {
         display: flex;
@@ -31,21 +32,67 @@
         text-align: center;
     }
 }
+//articleTitle flex responsive
+@mixin articleTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 
-
+    @include tabletOnly {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    @include mobileOnly {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}
+//left and right menu images responsive
 @mixin articleImagesSizes {
     max-width: 30%;
     max-height: 30%;
     @include tabletOnly {
+        max-width: 25%;
+        max-height: 30%;
+    }
+    @include mobileOnly {
+        max-width: 20%;
+        max-height: 30%;
+    }
+}
+@mixin articleLargerImagesSizes($right: true) {
+    max-width: 30%;
+    max-height: 30%;
+    @if $right {
+        right: -40px;
+    } @else {
+        left: -40px;
+    }
+    @include tabletOnly {
         max-width: 29%;
         max-height: 29%;
+        @if $right {
+            right: -20px;
+        } @else {
+            left: -20px;
+        }
     }
     @include mobileOnly {
         max-width: 28%;
         max-height: 28%;
+        @if $right {
+            right: -0px;
+        } @else {
+            left: 0px;
+        }
     }
 }
-
+//menus responsive
 @mixin containerMenuWidth {
     max-width: map-get($menuDesktop, width);
     min-height: map-get($menuDesktop, height);
@@ -60,8 +107,8 @@
         padding: 0 map-get($menuTablet, padding) 0 map-get($menuTablet, padding);
         margin-top: 0;
         margin-bottom: map-get($heights, footer) + 15px;
-        margin-right: 30px;
-        margin-left: 30px;
+        margin-right: 25px;
+        margin-left: 25px;
     }
 
     @include mobileOnly {
@@ -70,22 +117,24 @@
         padding: 0 map-get($menuMobile, padding) 0 map-get($menuMobile, padding);
         margin-top: 0;
         margin-bottom: map-get($heights, footer) + 15px;
-        margin-right: 30px;
-        margin-left: 30px;
+        margin-right: 20px;
+        margin-left: 20px;
     }
 }
 
+//grid responsive
 @mixin containerGridWidth {
-    //2 col so *2
+    //2 col so *2 (2 times the width of one col + 2 time the margin for each sides of each col + 1 for extra space)
     width: (map-get($menuSelectDesktop, width) * 2) + (map-get($menuSelectDesktop, margin) * 5);
     @include tabletOnly {
         width: (map-get($menuSelectTablet, width) * 2)+ (map-get($menuSelectTablet, margin) * 5);
     }
     @include mobileOnly {
+        //only one column
         width: (map-get($menuSelectMobile, width) * 1) + (map-get($menuSelectMobile, margin) * 2);
     }
 }
-
+//menu select responsive
 @mixin menuBlock {
     width: map-get($menuSelectDesktop, width);
     height: map-get($menuSelectDesktop, height);
@@ -106,18 +155,26 @@
 
 @mixin ellipsis-animation {
     display: inline-block;
+    //ascii character for ellispsis
     content: "\2026";
     margin: 0;
     padding: 0;
+    //hide the content if overflowing
     overflow: hidden;
-    vertical-align: bottom;
-    width: 0px;
 
+    vertical-align: bottom;
+    //start with width at zero
+    width: 0px;
     animation-name: ellipsis-animation;
+
+    //speed of the animation int this case
     animation-duration: 2000ms;
+    //break animation into 4 segment
     animation-timing-function: steps(4, end);
+    //doesn't stop
     animation-iteration-count: infinite;
 }
+
 @mixin wiggle-animation {
     animation-name: wiggle-animation;
     animation-fill-mode: both;
@@ -125,6 +182,7 @@
     animation-iteration-count: infinite;
 }
 
+//mixin with arguments for text gradient
 @mixin text-gradient($direction: to right, $first-color: #000000, $second-color: #000000) {
     background-image: linear-gradient($direction, $first-color, $second-color);
     background-size: 100%;

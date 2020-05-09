@@ -34,24 +34,25 @@
         left: 0;
         width: 100%;
         & .ml {
+            position: relative;
+            margin-left: 5px;
+            text-align: center;
             &:hover {
                 @include wiggle-animation;
             }
-            position: relative;
             & a {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                top: 0;
-                left: 0;
-                text-decoration: none;
                 z-index: 15;
             }
         }
-
         & .contact {
+            position: relative;
+            margin-left: 5px;
+            text-align: center;
             &:hover {
                 @include wiggle-animation;
+            }
+            & a{
+                z-index: 15;
             }
         }
     }
