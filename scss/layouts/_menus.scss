@@ -1,133 +1,133 @@
 //Block Elements Modifiers that we can reuse
 
 .menus_wrapper {
-    //title between header and menu
-    & .menuTitle {
-        margin: auto;
-        & h1 {
-            margin: 50px 0 25px 0;
-        }
+  //title between header and menu
+  & .menuTitle {
+    margin: auto;
+    & h1 {
+      margin: 50px 0 25px 0;
     }
-    //
-    & main {
+  }
+  //
+  & main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //used only in menu1, contain image and h2
+    & .ending {
+      width: 100%;
+      margin: 30px 0 30px 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      & img {
+        width: 38px;
+        height: 38px;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .containerMenu {
+    //set menu width, height, padding, margin and responsive
+    @include containerMenuWidth;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 0 0 20px $shadow-color;
+    //resize image and add top padding(only for menu1)
+    & > img {
+      padding-top: 60px;
+      width: 60px;
+      height: 60px;
+      margin: 0;
+    }
+
+    //variant only for menu1
+    &--menu-variant1 {
+      justify-content: flex-end;
+      & > h2 {
+        //adding some space between the title and the image
+        margin: 10px 0 0px 0;
+      }
+    }
+
+    & article {
+      width: 100%;
+      & .articleTitle {
         width: 100%;
+        //responsive
         display: flex;
-        justify-content: center;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
-        //used only in menu1, contain image and h2
-        & .ending {
-            width: 100%;
-            margin: 30px 0 30px 0;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-
-            & img {
-                width: 38px;
-                height: 38px;
-                margin-right: 5px;
-            }
+        //images on left and right of the subheading
+        & img {
+          position: relative;
+          margin: 40px 0px 10px 0px;
+          display: inline-block;
+          vertical-align: middle;
+          @include articleImagesSizes;
         }
-    }
-
-    .containerMenu {
-        //set menu width, height, padding, margin and responsive
-        @include containerMenuWidth;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        box-shadow: 0 0 20px $shadow-color;
-        //resize image and add top padding(only for menu1)
-        & > img {
-            padding-top: 60px;
-            width: 60px;
-            height: 60px;
-            margin: 0;
-        }
-
-        //variant only for menu1
-        &--menu-variant1 {
-            justify-content: flex-end;
-            & > h2 {
-                //adding some space between the title and the image
-                margin: 10px 0 0px 0;
-            }
-        }
-
-        & article {
-            width: 100%;
-            & .articleTitle {
-                width: 100%;
-                //responsive
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-                //images on left and right of the subheading
-                & img {
-                    margin: 40px 0px 10px 0px;
-                    display: inline-block;
-                    vertical-align: middle;
-                    @include articleImagesSizes;
-                }
-                //for menus 2,3 and 4 left and right image are longer
-                &__largerImage{
-                    & img:first-child{
-                        position: relative;
-                        @include articleLargerImagesSizes($right:false);
-                    }
-                    & img{
-                        position: relative;
-                        @include articleLargerImagesSizes($right:true);
-                    }
-                    
-                }
-                //variant change responsive for mobile, justify-content is center instead of space-between
-                &--variant{
-                    @include articleTitle;
-            }
-            }
-        }
-
-        //subheading with underline transition
-        &--subheading {
-            margin: 40px 0px 10px 0px;
-            //explicit position so ::after pseudo-element is relatif to subheading
+        //for menus 2,3 and 4 left and right image are longer
+        &__largerImage {
+          & img:first-child {
             position: relative;
-            text-align: center;
-            &::after {
-                content: "";
-                position: absolute;
-                //set line on bottom left of subheading
-                bottom: 0;
-                left: 0;
-                //set width to 100% of subheading
-                width: 100%;
-                border-bottom: 1px solid black;
-                //end with scale at 0 and origin on bottom right
-                transform: scale(0);
-                transform-origin: bottom right;
-                transition-duration: 300ms;
-                transition-timing-function: ease-out;
-                transition-property: transform;
-            }
-            &:hover::after {
-                transform: scale(1);
-                //start with origin on bottom left
-                transform-origin: bottom left;
-            }
+            @include articleLargerImagesSizes($right: false);
+          }
+          & img {
+            position: relative;
+            @include articleLargerImagesSizes($right: true);
+          }
         }
-
-        //default ul and li, variants in _menus_variants
-        & ul {
-            & li {
-                //li responsive
-                @include articleLi;
-                margin: 5px 0 10px 0;
-                min-height: 36px;
-            }
+        //variant change responsive for mobile, justify-content is center instead of space-between
+        &--variant {
+          @include articleTitle;
         }
+      }
     }
+
+    //subheading with underline transition
+    &__subheading {
+      margin: 40px 0px 10px 0px;
+      //explicit position so ::after pseudo-element is relatif to subheading
+      position: relative;
+      text-align: center;
+      &::after {
+        content: "";
+        position: absolute;
+        //set line on bottom left of subheading
+        bottom: 0;
+        left: 0;
+        //set width to 100% of subheading
+        width: 100%;
+        border-bottom: 1px solid black;
+        //end with scale at 0 and origin on bottom right
+        transform: scale(0);
+        transform-origin: bottom right;
+        transition-duration: 300ms;
+        transition-timing-function: ease-out;
+        transition-property: transform;
+      }
+      &:hover::after {
+        transform: scale(1);
+        //start with origin on bottom left
+        transform-origin: bottom left;
+      }
+    }
+
+    //default ul and li, variants in _menus_variants
+    & ul {
+      & li {
+        //li responsive
+        @include articleLi;
+        margin: 5px 0 10px 0;
+        min-height: 36px;
+      }
+    }
+  }
 }

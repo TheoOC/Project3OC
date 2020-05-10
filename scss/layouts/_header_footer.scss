@@ -1,59 +1,59 @@
 #main_wrapper,
 .menus_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+
+  & header {
+    background-color: map-get($extremity-colors, header);
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    height: map-get($heights, header);
+    width: 100%;
+    & img {
+      height: 50px;
+      margin: auto;
+    }
+    & a {
+      margin: auto;
+    }
+  }
+
+  & footer {
+    z-index: 10;
+    background-color: map-get($extremity-colors, footer);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
-    margin: auto;
-
-    & header {
-        background-color: map-get($extremity-colors, header);
-        display: flex;
-        height: map-get($heights, header);
-        width: 100%;
-        & img {
-            height: 50px;
-            margin: auto;
-        }
-        & a {
-            margin: auto;
-        }
+    height: map-get($heights, footer);
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    & .ml {
+      position: relative;
+      margin-left: 5px;
+      text-align: center;
+      &:hover {
+        @include wiggle-animation;
+      }
+      & a {
+        z-index: 15;
+      }
     }
-
-    & footer {
-        z-index: 10;
-        background-color: map-get($extremity-colors, footer);
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        height: map-get($heights, footer);
-        width: 100%;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        & .ml {
-            position: relative;
-            margin-left: 5px;
-            text-align: center;
-            &:hover {
-                @include wiggle-animation;
-            }
-            & a {
-                z-index: 15;
-            }
-        }
-        & .contact {
-            position: relative;
-            margin-left: 5px;
-            text-align: center;
-            &:hover {
-                @include wiggle-animation;
-            }
-            & a{
-                z-index: 15;
-            }
-        }
+    & .contact {
+      position: relative;
+      margin-left: 5px;
+      text-align: center;
+      &:hover {
+        @include wiggle-animation;
+      }
+      & a {
+        z-index: 15;
+      }
     }
+  }
 }

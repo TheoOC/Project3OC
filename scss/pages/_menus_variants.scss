@@ -1,43 +1,43 @@
 //variants for different bg color of each menu
 .containerMenu {
-    &--bg1 {
-        background-color: map-get($menu-bg-colors, menu1);
-    }
-    &--bg2 {
-        background-color: map-get($menu-bg-colors, menu2);
-    }
-    &--bg3 {
-        background-color: map-get($menu-bg-colors, menu3);
-    }
-    &--bg4 {
-        background-color: map-get($menu-bg-colors, menu4);
-    }
+  &--bg1 {
+    background-color: map-get($menu-bg-colors, menu1);
+  }
+  &--bg2 {
+    background-color: map-get($menu-bg-colors, menu2);
+  }
+  &--bg3 {
+    background-color: map-get($menu-bg-colors, menu3);
+  }
+  &--bg4 {
+    background-color: map-get($menu-bg-colors, menu4);
+  }
 }
 
 //different spacing for different menus
 .menuSpacing {
-    &__variant2 {
-        & h2 {
-            margin: 120px 0 40px 0;
-        }
-        & li {
-            padding: 0 35px 0 35px;
-        }
+  &__variant2 {
+    & h2 {
+      margin: 120px 0 40px 0;
     }
-    &__variant3 {
-        & h2 {
-            margin: 110px 0 40px 0;
-        }
-        & li {
-            padding: 0 35px 0 35px;
-        }
+    & li {
+      padding: 0 35px 0 35px;
     }
-    &__variant4 {
-        & h2 {
-            margin: 110px 0 40px 0;
-        }
-        & li {
-            padding: 0 18px 0 18px;
-        }
+  }
+  &__variant3 {
+    & h2 {
+      margin: 110px 0 40px 0;
     }
+    & li {
+      padding: 0 35px 0 35px;
+    }
+  }
+  &__variant4 {
+    & h2 {
+      margin: 110px 0 40px 0;
+    }
+    & li {
+      padding: 0 18px 0 18px;
+    }
+  }
 }
