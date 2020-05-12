@@ -127,7 +127,7 @@
 
 //grid responsive
 @mixin containerGridWidth {
-  //2 col so *2 (2 times the width of one col + 2 time the margin for each sides of each col + 1 for extra space)
+  //2 col so 2 times the width of one col + 2 time the margin for each sides of each col + 1 for extra space
   width: (map-get($menuSelectDesktop, width) * 2) +
     (map-get($menuSelectDesktop, margin) * 5);
   @include tabletOnly {
